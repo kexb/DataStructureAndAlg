@@ -1,11 +1,13 @@
 package com.atguigu.kmp;
 
 public class violenceMatch {
+    public static  int count=0;
     public static void main(String[] args) {
         String str1 = "尚硅谷你 尚硅谷你尚硅 尚硅谷你尚硅谷你尚硅你好";
         String str2 = "尚硅谷你尚硅";
         int index=violenceMatch(str1,str2);
         System.out.println("index="+index);
+        System.out.println(count);
     }
 
     public static int violenceMatch(String str1, String str2) {
@@ -16,6 +18,7 @@ public class violenceMatch {
         int i = 0;
         int j = 0;
         while (i < s1Len && j < s2Len) {
+            count++;
             if (s1[i] == s2[j]) {
                 i++;
                 j++;

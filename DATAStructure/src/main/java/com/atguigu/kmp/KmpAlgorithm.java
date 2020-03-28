@@ -4,20 +4,21 @@ import java.util.Arrays;
 
 public class KmpAlgorithm {
     public static void main(String[] args) {
-        String str1 = "BBC ABCDAB ABCDABCDABDE";
-        String str2 = "ABCDABD";
-        System.out.println(Arrays.toString(kmpNext("ABCDABD")));
-
-        //int[] next = kmpNext(str2);
-        //next = kmpNext(str2);
-        //int index = kmpSearch(str1, str2, next);
-        //System.out.println("index=" + index);
+        String str1 = "尚硅谷你 尚硅谷你尚硅 尚硅谷你尚硅谷你尚硅你好";
+        String str2 = "尚硅谷你尚硅";
+        int[] next = kmpNext(str2);
+        int index = kmpSearch(str1, str2, next);
+        System.out.println("index=" + index);
+        System.out.println(count);
     }
+    static  int count=0;
 
     public static int kmpSearch(String str1, String str2, int[] next) {
         for (int i = 0, j = 0; i < str1.length(); i++) {
+            count++;
             while (j > 0 && str1.charAt(i) != str2.charAt(j)) {
                 j = next[j - 1];
+
             }
             if (str1.charAt(i) == str2.charAt(j)) {
                 j++;
