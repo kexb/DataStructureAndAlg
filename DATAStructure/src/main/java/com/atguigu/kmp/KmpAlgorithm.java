@@ -6,9 +6,12 @@ public class KmpAlgorithm {
     public static void main(String[] args) {
         String str1 = "BBC ABCDAB ABCDABCDABDE";
         String str2 = "ABCDABD";
-        int[] next = kmpNext(str2);
-        int index = kmpSearch(str1, str2, next);
-        System.out.println("index=" + index);
+        System.out.println(Arrays.toString(kmpNext("ABCDABD")));
+
+        //int[] next = kmpNext(str2);
+        //next = kmpNext(str2);
+        //int index = kmpSearch(str1, str2, next);
+        //System.out.println("index=" + index);
     }
 
     public static int kmpSearch(String str1, String str2, int[] next) {
