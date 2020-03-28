@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="" />
+    <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +30,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -36,6 +41,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZLBhLDqGyaXYVKY3s1OSXsxaZ9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -46,8 +54,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
   </component>
-  <component name="RunManager" selected="Application.AvlTreeDemo">
+  <component name="RunManager" selected="Application.KmpAlgorithm">
     <configuration name="AvlTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.avl.AvlTreeDemo" />
       <module name="DATAStructure" />
@@ -61,25 +70,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchNoRecur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.algorithm.binarysearchnorecursion.BinarySearchNoRecur" />
+    <configuration name="KmpAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.kmp.KmpAlgorithm" />
       <module name="DATAStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.algorithm.binarysearchnorecursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.graph.Graph" />
-      <module name="DATAStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.graph.*" />
+          <option name="PATTERN" value="com.atguigu.kmp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,13 +109,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="violenceMatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.kmp.violenceMatch" />
+      <module name="DATAStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.kmp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AvlTreeDemo" />
+        <item itemvalue="Application.KmpAlgorithm" />
+        <item itemvalue="Application.violenceMatch" />
         <item itemvalue="Application.KnapsackProblem" />
+        <item itemvalue="Application.AvlTreeDemo" />
         <item itemvalue="Application.hannuota" />
-        <item itemvalue="Application.Graph" />
-        <item itemvalue="Application.BinarySearchNoRecur" />
       </list>
     </recent_temporary>
   </component>
@@ -155,11 +164,38 @@
       <workItem from="1585183714313" duration="25934000" />
       <workItem from="1585270894946" duration="29083000" />
       <workItem from="1585358103342" duration="5645000" />
+      <workItem from="1585371345278" duration="9067000" />
     </task>
+    <task id="LOCAL-00001" summary="22">
+      <created>1585372666957</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585372666957</updated>
+    </task>
+    <task id="LOCAL-00002" summary="22">
+      <created>1585372791610</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585372791610</updated>
+    </task>
+    <task id="LOCAL-00003" summary="22">
+      <created>1585374795377</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585374795377</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="22" />
+    <option name="LAST_COMMIT_MESSAGE" value="22" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1585184310020">
@@ -178,46 +214,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="523" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1585231944790" />
-    <state width="492" height="466" key="DebuggerActiveHint" timestamp="1585370515484">
+    <state x="353" y="6" key="CommitChangelistDialog2" timestamp="1585374794503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1585370515484" />
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom" timestamp="1585370915478">
+    <state x="353" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585374794503" />
+    <state width="492" height="466" key="DebuggerActiveHint" timestamp="1585391989078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585370915478" />
-    <state width="1493" height="218" key="GridCell.Tab.0.center" timestamp="1585370915478">
+    <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1585391989078" />
+    <state width="1493" height="218" key="GridCell.Tab.0.bottom" timestamp="1585392692368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585370915478" />
-    <state width="1493" height="218" key="GridCell.Tab.0.left" timestamp="1585370915478">
+    <state width="1493" height="218" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585392692368" />
+    <state width="1493" height="218" key="GridCell.Tab.0.center" timestamp="1585392692368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585370915478" />
-    <state width="1493" height="218" key="GridCell.Tab.0.right" timestamp="1585370915478">
+    <state width="1493" height="218" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585392692368" />
+    <state width="1493" height="218" key="GridCell.Tab.0.left" timestamp="1585392692368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585370915478" />
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1585370797059">
+    <state width="1493" height="218" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585392692368" />
+    <state width="1493" height="218" key="GridCell.Tab.0.right" timestamp="1585392692368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585370797059" />
-    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1585370797059">
+    <state width="1493" height="218" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585392692368" />
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1585392100962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585370797059" />
-    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1585370797059">
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585392100962" />
+    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1585392100962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585370797059" />
-    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1585370797059">
+    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585392100962" />
+    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1585392100961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585370797059" />
+    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585392100961" />
+    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1585392100962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585392100962" />
     <state x="490" y="154" width="561" height="524" key="StructurePopup" timestamp="1585276434195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="561" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1585276434195" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1585372793031">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585372793031" />
     <state x="499" y="166" key="extract.method.dialog" timestamp="1585366487524">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -469,16 +513,16 @@
           <option name="timeStamp" value="193" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/dynamic/KnapsackProblem.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="194" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/violenceMatch.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="199" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="perRowValue.get(maxLen)" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
