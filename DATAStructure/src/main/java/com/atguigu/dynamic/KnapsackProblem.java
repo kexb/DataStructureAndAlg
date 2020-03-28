@@ -46,15 +46,19 @@ public class KnapsackProblem {
 
         System.out.println("规划后...");
         foreachVal(v);
-        //这样输出会把所有的放入情况都得到 其实我们只需要最后的放入情况
-//        for (int i = 0; i < path.length; i++) {
-//            for (int j = 0; j < path[i].length; j++) {
-//                if (path[i][j] == 1) {
-//                    System.out.printf("第%d个商品放入到背包\n", i);
-//                }
-//            }
-//        }
 
+
+        System.out.println("路径记录");
+        //这样输出会把所有的放入情况都得到 其实我们只需要最后的放入情况
+        for (int i = 0; i < path.length; i++) {
+            for (int j = 0; j < path[i].length; j++) {
+                if (path[i][j] == 1) {
+                    System.out.printf("第%d个商品放入到背包%8s", i," ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("路径记录");
         //动脑筋
         int i = path.length - 1;//行的最大下标
         int j = path[0].length - 1;//列的最大下标
