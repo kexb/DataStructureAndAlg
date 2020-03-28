@@ -9,7 +9,7 @@ public class violenceMatch {
     }
 
     public static int violenceMatch(String str1, String str2) {
-        char[] s1 = str1.toCharArray();
+        char[] s1 = str1.toCharArray(); 
         char[] s2 = str2.toCharArray();
         int s1Len = s1.length;
         int s2Len = s2.length;
