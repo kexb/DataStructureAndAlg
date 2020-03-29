@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/greedy/GreedyAlgorithm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +56,26 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
   </component>
-  <component name="RunManager" selected="Application.KmpAlgorithm">
+  <component name="RunManager" selected="Application.GreedyAlgorithm">
     <configuration name="AvlTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.avl.AvlTreeDemo" />
       <module name="DATAStructure" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.atguigu.avl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreedyAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.greedy.GreedyAlgorithm" />
+      <module name="DATAStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.greedy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,19 +109,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hannuota" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.hannuo.hannuota" />
-      <module name="DATAStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.hannuo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="violenceMatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.kmp.violenceMatch" />
       <module name="DATAStructure" />
@@ -124,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GreedyAlgorithm" />
         <item itemvalue="Application.KmpAlgorithm" />
         <item itemvalue="Application.violenceMatch" />
         <item itemvalue="Application.KnapsackProblem" />
         <item itemvalue="Application.AvlTreeDemo" />
-        <item itemvalue="Application.hannuota" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +164,9 @@
       <workItem from="1585183714313" duration="25934000" />
       <workItem from="1585270894946" duration="29083000" />
       <workItem from="1585358103342" duration="5645000" />
-      <workItem from="1585371345278" duration="9067000" />
+      <workItem from="1585371345278" duration="23196000" />
+      <workItem from="1585440922504" duration="240000" />
+      <workItem from="1585441383065" duration="9627000" />
     </task>
     <task id="LOCAL-00001" summary="22">
       <created>1585372666957</created>
@@ -218,42 +220,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="353" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585374794503" />
-    <state width="492" height="466" key="DebuggerActiveHint" timestamp="1585391989078">
+    <state width="492" height="466" key="DebuggerActiveHint" timestamp="1585453990230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1585391989078" />
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom" timestamp="1585392692368">
+    <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1585453990230" />
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom" timestamp="1585453991726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585392692368" />
-    <state width="1493" height="218" key="GridCell.Tab.0.center" timestamp="1585392692368">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585453991726" />
+    <state width="1493" height="258" key="GridCell.Tab.0.center" timestamp="1585453991726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585392692368" />
-    <state width="1493" height="218" key="GridCell.Tab.0.left" timestamp="1585392692368">
+    <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585453991726" />
+    <state width="1493" height="258" key="GridCell.Tab.0.left" timestamp="1585453991726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585392692368" />
-    <state width="1493" height="218" key="GridCell.Tab.0.right" timestamp="1585392692368">
+    <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585453991726" />
+    <state width="1493" height="258" key="GridCell.Tab.0.right" timestamp="1585453991726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585392692368" />
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1585392100962">
+    <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585453991726" />
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1585453991726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585392100962" />
-    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1585392100962">
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585453991726" />
+    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1585453991726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585392100962" />
-    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1585392100961">
+    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585453991726" />
+    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1585453991726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585392100961" />
-    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1585392100962">
+    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585453991726" />
+    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1585453991726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585392100962" />
+    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585453991726" />
     <state x="490" y="154" width="561" height="524" key="StructurePopup" timestamp="1585276434195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -270,10 +272,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="377" y="112" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1585231679132" />
-    <state x="402" y="439" key="run.anything.popup" timestamp="1585026837822">
+    <state x="402" y="439" key="run.anything.popup" timestamp="1585406720605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="402" y="439" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585026837822" />
+    <state x="402" y="439" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585406720605" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585219740569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -514,13 +516,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/violenceMatch.java</url>
-          <line>18</line>
+          <line>21</line>
           <option name="timeStamp" value="198" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="199" />
+          <line>63</line>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/greedy/GreedyAlgorithm.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/greedy/GreedyAlgorithm.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/greedy/GreedyAlgorithm.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/greedy/GreedyAlgorithm.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="223" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
