@@ -199,7 +199,7 @@ class VisitedVertex {
         System.out.println();
         //输出pre_visited
         for (int i : pre_visited) {
-            System.out.print(i + " ");
+            System.out.print(i + "v ");
         }
         System.out.println();
         //dis
