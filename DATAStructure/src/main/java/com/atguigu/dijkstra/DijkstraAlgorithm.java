@@ -3,11 +3,16 @@ package com.atguigu.dijkstra;
 import org.omg.CORBA.MARSHAL;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 //迪杰斯特拉算法
 public class DijkstraAlgorithm {
     public static void main(String[] args) {
         char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+        HashMap<Integer, Character> map = new HashMap<>();
+        for (int i = 0; i < vertex.length; i++) {
+            map.put(i, vertex[i]);
+        }
         //邻接矩阵
         int[][] martrix = new int[vertex.length][vertex.length];
         final int N = 65535;//表示不可连接
@@ -20,8 +25,13 @@ public class DijkstraAlgorithm {
         martrix[6] = new int[]{2, 3, N, N, 4, 6, N};
         Graph graph = new Graph(vertex, martrix);
         graph.showGraph();
-        graph.dsj(6);
-        graph.showDijkstra();
+        for (int i = 0; i < vertex.length; i++) {
+            System.out.printf("从%s出发===================", map.get(i));
+            graph.dsj(i);
+            graph.showDijkstra();
+            System.out.println();
+        }
+
 
     }
 }
@@ -30,6 +40,14 @@ class Graph {
     private char[] vertex;//顶点数组
     private int[][] martrix;//邻接矩阵
     private VisitedVertex vv;//已经访问的顶点的集合
+    private static HashMap<Integer, Character> map = new HashMap<>();
+
+    static {
+        char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+        for (int i = 0; i < vertex.length; i++) {
+            map.put(i, vertex[i]);
+        }
+    }
 
     //构造器
     public Graph(char[] vertex, int[][] martrix) {
@@ -68,7 +86,7 @@ class Graph {
         int len;
         int startPoint2IndexDix = 0;
         int ijDix;
-        boolean jNoAccess;
+        //boolean jNoAccess;
         //根据遍历我们的邻接矩阵的martrix{index]行
         for (int j = 0; j < martrix[index].length; j++) {
             //出发顶点到index顶点的距离
@@ -77,10 +95,11 @@ class Graph {
             ijDix = martrix[index][j];
             //len 含义是: 出发顶点到index顶点的距离+从index顶点到j的距离的和
             len = startPoint2IndexDix + ijDix;
-            jNoAccess = !vv.in(j);
+            //jNoAccess = !vv.in(j);
             //如果j顶点没有被访问过 并且len 小于出发顶点到j顶点的距离 就需要更新
             //len < vv.getDis(j) 例子G->B->D 和 G->F->D  com/atguigu/dijkstra/图解.xlsx 和 53.迪杰斯特拉算法-图解
-            if (jNoAccess && len < vv.getDis(j)) {
+            //jNoAccess &&
+            if (len < vv.getDis(j)) {
                 //出发-》index-》j
                 vv.updatePre(j, index);//j顶点的前驱更新为index顶点
                 vv.updateDis(j, len);//更新出发顶点到j顶点的距离
@@ -158,6 +177,7 @@ class VisitedVertex {
     public int updateArr() {
         int min = 65535, index = 0;
         for (int i = 0; i < already_arr.length; i++) {
+            //顶点还没有被访问过 且距离最短的选择出来作为新的访问顶点
             if (already_arr[i] == 0 && dis[i] < min) {
                 min = dis[i];
                 index = i;
