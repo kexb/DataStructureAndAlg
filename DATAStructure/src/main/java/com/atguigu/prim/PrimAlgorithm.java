@@ -1,5 +1,6 @@
 package com.atguigu.prim;
 
+
 import java.util.Arrays;
 
 //普利姆算法-最小生成树
@@ -27,6 +28,7 @@ public class PrimAlgorithm {
         minTree.createGraph(graph, verxs, data, weight);
         //输出
         minTree.showGraph(graph);
+        minTree.prim(graph, 0);
     }
 }
 
@@ -47,6 +49,47 @@ class MinTree {
         for (int[] link : graph.weight) {
             System.out.println(Arrays.toString(link));
         }
+    }
+
+    /**
+     * 编写prim算法 得到最小生成树
+     *
+     * @param graph 图
+     * @param v     顶点
+     */
+    public void prim(MGraph graph, int v) {
+        //visited[] 标记顶点是否被访问过
+        int[] visited = new int[graph.verxs];
+        //visited[] 默认元素的值都是0 表示没有访问过
+        for (int i : visited) {
+            visited[i] = 0;
+        }
+        visited[v] = 1;
+        //顶点1下标
+        int h1 = -1;
+        //顶点2下标
+        int h2 = -1;
+        //初始化为一个大树 后面遍历过程中 会被替换
+        int minWeight = 10000;
+        //确定每一次生成的子图和哪个节点的距离最近
+        for (int k = 1; k < graph.verxs; k++) {//因为有graph.verxs个顶点 普利姆算法结束后 右graph.verxs-1条边
+            for (int i = 0; i < graph.verxs; i++) {//i节点表示被访问过的节点
+                for (int j = 0; j < graph.verxs; j++) {//j节点表示还没有被访问过的节点
+                    if (visited[i] == 1 && visited[j] == 0 && graph.weight[i][j] < minWeight) {
+                        minWeight = graph.weight[i][j];
+                        h1 = i;
+                        h2 = j;
+                    }
+                }
+            }
+            //找到一条边是最小
+            System.out.printf("边<%s,%s> 权值:%s\n", graph.data[h1], graph.data[h2], minWeight);
+            //当前节点标记为已访问
+            visited[h2] = 1;
+            //minWeight重新设置为最大值
+            minWeight = 10000;
+        }
+
     }
 }
 
