@@ -21,6 +21,7 @@ public class DijkstraAlgorithm {
         Graph graph = new Graph(vertex, martrix);
         graph.showGraph();
         graph.dsj(6);
+        graph.showDijkstra();
 
     }
 }
@@ -34,6 +35,10 @@ class Graph {
     public Graph(char[] vertex, int[][] martrix) {
         this.vertex = vertex;
         this.martrix = martrix;
+    }
+
+    public void showDijkstra() {
+        vv.show();
     }
 
     //显示图
@@ -52,6 +57,10 @@ class Graph {
         vv = new VisitedVertex(this.vertex.length, index);
         //更新index顶点到周围顶点的距离
         update(index);
+        for (int j = 1; j < vertex.length; j++) {
+            index = vv.updateArr();
+            update(index);
+        }
     }
 
     //更新index下标顶点到周围顶点的距离和周围顶点的前驱顶点
@@ -137,10 +146,49 @@ class VisitedVertex {
     }
 
     //继续选择并返回新的访问顶点 比如这里G完后 就是A作为新的访问顶点(注意不是出发点)
-    public void updateArr() {
+    public int updateArr() {
         int min = 65535, index = 0;
         for (int i = 0; i < already_arr.length; i++) {
-
+            if (already_arr[i] == 0 && dis[i] < min) {
+                min = dis[i];
+                index = i;
+            }
         }
+        //更新index顶点被访问过
+        already_arr[index] = 1;
+        return index;
+    }
+
+    //显示最后的结果
+    //即将3个数组的情况输出
+    public void show() {
+        System.out.println("====================================");
+        //先输出already_arr
+        for (int i : already_arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        //输出pre_visited
+        for (int i : pre_visited) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        //dis
+        for (int i : dis) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        //为了好看最后的距离
+        char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+        int count = 0;
+        for (int i : dis) {
+            if (i != 65535) {
+                System.out.print(vertex[count++] + "(" + i + ")");
+            } else {
+                System.out.println("N");
+            }
+        }
+
     }
 }
