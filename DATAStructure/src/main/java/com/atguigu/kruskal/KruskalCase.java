@@ -90,7 +90,7 @@ public class KruskalCase {
                 rets[index++] = edges[i];//有一条加入到rets数组
             }
         }
-        //统计并打印'最小生成树'输出rets数组<E,F>=2	<C,D>=3	<D,E>=4	<B,F>=7	<E,G>=8	<A,B>=12	
+        //统计并打印'最小生成树'输出rets数组<E,F>=2	<C,D>=3	<D,E>=4	<B,F>=7	<E,G>=8	<A,B>=12
         System.out.println("最小生成树为:");
         for (int i = 0; i < index; i++) {
             System.out.print(rets[i]+"\t");
