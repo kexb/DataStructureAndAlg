@@ -66,10 +66,16 @@ class Graph {
     //更新index下标顶点到周围顶点的距离和周围顶点的前驱顶点
     private void update(int index) {
         int len = 0;
+        int preDix = 0;
+        int ijDix = 0;
         //根据遍历我们的邻接矩阵的martrix{index]行
         for (int j = 0; j < martrix[index].length; j++) {
+            //出发顶点到index顶点的距离
+            preDix = vv.getDis(index);
+            //从index顶点到j的距离的和
+            ijDix = martrix[index][j];
             //len 含义是: 出发顶点到index顶点的距离+从index顶点到j的距离的和
-            len = vv.getDis(index) + martrix[index][j];
+            len = preDix + ijDix;
             //如果j顶点没有被访问过 并且len 小于出发顶点到j顶点的距离 就需要更新
             if (!vv.in(j) && len < vv.getDis(j)) {
                 //出发-》index-》j
