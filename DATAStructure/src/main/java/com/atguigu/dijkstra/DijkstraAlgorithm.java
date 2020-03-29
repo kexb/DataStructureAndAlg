@@ -79,7 +79,7 @@ class Graph {
             len = startPoint2IndexDix + ijDix;
             jNoAccess = !vv.in(j);
             //如果j顶点没有被访问过 并且len 小于出发顶点到j顶点的距离 就需要更新
-            //len < vv.getDis(j) 例子G->B->D 和 G->F->D 有道笔记53.迪杰斯特拉算法-图解
+            //len < vv.getDis(j) 例子G->B->D 和 G->F->D  com/atguigu/dijkstra/图解.xlsx 和 53.迪杰斯特拉算法-图解
             if (jNoAccess && len < vv.getDis(j)) {
                 //出发-》index-》j
                 vv.updatePre(j, index);//j顶点的前驱更新为index顶点
