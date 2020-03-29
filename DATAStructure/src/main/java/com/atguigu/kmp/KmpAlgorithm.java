@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class KmpAlgorithm {
     public static void main(String[] args) {
-//        String str1 = "尚硅谷你 尚硅谷你尚硅 尚硅谷你尚硅谷你尚硅你好";
-//        String str2 = "谷你尚";//尚硅谷你尚硅
+        String str1 = "尚硅谷你 尚硅谷你尚硅 尚硅谷你尚硅谷你尚硅你好";
+        String str2 = "谷你尚";//尚硅谷你尚硅
 
-        String str1 = "ABCDABCDEFG";
-        String str2 = "ABCDEFG";//尚硅谷你尚硅
+//        String str1 = "ABCDABCDEFG";
+//        String str2 = "ABCDEFG";//尚硅谷你尚硅
         int[] next = kmpNext(str2);
         int index = kmpSearch(str1, str2, next);
         System.out.println("index=" + index);
