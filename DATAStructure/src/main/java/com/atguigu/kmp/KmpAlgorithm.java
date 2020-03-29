@@ -54,6 +54,7 @@ public class KmpAlgorithm {
         next[0] = 0;
         for (int i = 1, j = 0; i < dest.length(); i++) {
             while (j > 0 && dest.charAt(i) != dest.charAt(j)) {
+                //回溯
                 j = next[j - 1];
             }
             if (dest.charAt(i) == dest.charAt(j)) {
