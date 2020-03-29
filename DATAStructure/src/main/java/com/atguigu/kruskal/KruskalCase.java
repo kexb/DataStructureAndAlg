@@ -24,6 +24,7 @@ public class KruskalCase {
         };
         KruskalCase kruskalCase = new KruskalCase(vertexs, martrix);
         kruskalCase.print();
+        kruskalCase.kruskal();
     }
 
     private static void testSort(KruskalCase kruskalCase) {
@@ -57,6 +58,42 @@ public class KruskalCase {
                     this.edgeNum++;
                 }
             }
+        }
+    }
+
+    public void kruskal() {
+        int index = 0;//表示最后结果数组的索引
+        int[] ends = new int[this.edgeNum];//用于保存'已有生成树'中每个顶点在最小生成树中的终点
+        //创建结果数组 保存最后的最小生成树
+        EData[] rets = new EData[this.edgeNum];
+        //获取图中 所有的边的集合 一共有12条边
+        EData[] edges = getEdges();
+        System.out.println("图的边的集合=" + Arrays.toString(edges) + "共" + edges.length + "条边");
+
+        //按照边的权值大小进行排序(从小到大)
+        sortEdges(edges);
+
+        //遍历edges数组 将边添加到最小生成树种时 判断准备加入的边是否形成了回路
+        //如果没有就加入到rets 否则不能加入
+        for (int i = 0; i < edgeNum; i++) {
+            //获取到第i条边的第一个顶点(起点)
+            int p1 = getPosition(edges[i].start);
+            //获取到第i条边的第2个顶点
+            int p2 = getPosition(edges[i].end);
+            //获取p1这个顶点在已有生成树中的终点
+            int m = getEnd(ends, p1);
+            //获取p2这个顶点在已有生成树中的终点
+            int n = getEnd(ends, p2);
+            //是否构成回路
+            if (m != n) {//没有构成回路
+                ends[m] = n;//设置m在'已有生成树'中的终点
+                rets[index++] = edges[i];//有一条加入到rets数组
+            }
+        }
+        //统计并打印'最小生成树'输出rets数组<E,F>=2	<C,D>=3	<D,E>=4	<B,F>=7	<E,G>=8	<A,B>=12	
+        System.out.println("最小生成树为:");
+        for (int i = 0; i < index; i++) {
+            System.out.print(rets[i]+"\t");
         }
     }
 
@@ -98,7 +135,7 @@ public class KruskalCase {
     }
 
     /**
-     * 功能: 获取途中边 放到EData[]数组 后面我们需要遍历该数组
+     * 功能: 获取图中边 放到EData[]数组 后面我们需要遍历该数组
      * 是通过martrix 邻接矩阵来获取
      * EData[] 形式[['A','B',12],['B'],'F',7]......]
      *
@@ -148,10 +185,6 @@ class EData {
 
     @Override
     public String toString() {
-        return "EData{" +
-                "start=" + start +
-                ", end=" + end +
-                ", weight=" + weight +
-                '}';
+        return String.format("<%s,%s>=%s",start,end,weight);
     }
 }
