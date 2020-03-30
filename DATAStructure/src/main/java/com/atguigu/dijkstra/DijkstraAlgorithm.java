@@ -31,7 +31,7 @@ public class DijkstraAlgorithm {
             graph.showDijkstra();
             System.out.println();
         }
-
+        System.out.println();
 
     }
 }
@@ -84,22 +84,22 @@ class Graph {
     //更新index下标顶点到周围顶点的距离和周围顶点的前驱顶点
     private void update(int index) {
         int len;
-        int startPoint2IndexDix = 0;
-        int ijDix;
+        int start2IndexDis;
+        int index2jDis;
         //boolean jNoAccess;
         //根据遍历我们的邻接矩阵的martrix{index]行
         for (int j = 0; j < martrix[index].length; j++) {
             //出发顶点到index顶点的距离
-            startPoint2IndexDix = vv.getDis(index);
+            start2IndexDis = vv.getDis(index);
             //从index顶点到j的距离的和
-            ijDix = martrix[index][j];
+            index2jDis = martrix[index][j];
             //len 含义是: 出发顶点到index顶点的距离+从index顶点到j的距离的和
-            len = startPoint2IndexDix + ijDix;
-            //jNoAccess = !vv.in(j);
+            len = start2IndexDis + index2jDis;
+            //出发顶点到j顶点的距离
+            int start2jDis = vv.getDis(j);
             //如果j顶点没有被访问过 并且len 小于出发顶点到j顶点的距离 就需要更新
             //len < vv.getDis(j) 例子G->B->D 和 G->F->D  com/atguigu/dijkstra/图解.xlsx 和 53.迪杰斯特拉算法-图解
-            //jNoAccess &&
-            if (len < vv.getDis(j)) {
+            if (!vv.in(j) && len < start2jDis) {
                 //出发-》index-》j
                 vv.updatePre(j, index);//j顶点的前驱更新为index顶点
                 vv.updateDis(j, len);//更新出发顶点到j顶点的距离
@@ -128,7 +128,7 @@ class VisitedVertex {
         this.pre_visited = new int[length];
         this.dis = new int[length];
         //初始化 dis数组
-        Arrays.fill(dis, 65535);
+        Arrays.fill(dis, FIN);
         this.already_arr[index] = 1;
         //设置出发顶点的访问距离为0
         this.dis[index] = 0;
@@ -175,7 +175,7 @@ class VisitedVertex {
 
     //继续选择并返回新的访问顶点 比如这里G完后 就是A作为新的访问顶点(注意不是出发点)
     public int updateArr() {
-        int min = 65535, index = 0;
+        int min = FIN, index = 0;
         for (int i = 0; i < already_arr.length; i++) {
             //顶点还没有被访问过 且距离最短的选择出来作为新的访问顶点
             if (already_arr[i] == 0 && dis[i] < min) {
@@ -187,6 +187,8 @@ class VisitedVertex {
         already_arr[index] = 1;
         return index;
     }
+
+    private static final int FIN = 65535;
 
     //显示最后的结果
     //即将3个数组的情况输出
@@ -212,7 +214,7 @@ class VisitedVertex {
         char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         int count = 0;
         for (int i : dis) {
-            if (i != 65535) {
+            if (i != FIN) {
                 System.out.print(vertex[count++] + "(" + i + ")");
             } else {
                 System.out.println("N");
