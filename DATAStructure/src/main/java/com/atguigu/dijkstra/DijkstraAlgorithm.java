@@ -72,11 +72,11 @@ class Graph {
      * @param index 表示出发顶点对应的下标
      */
     public void dsj(int index) {
-        vv = new VisitedVertex(this.vertex.length, index);
+        this.vv = new VisitedVertex(this.vertex.length, index);
         //更新index顶点到周围顶点的距离
         update(index);
-        for (int j = 1; j < vertex.length; j++) {
-            index = vv.updateArr();
+        for (int j = 1; j < this.vertex.length; j++) {
+            index = this.vv.updateArr();
             update(index);
         }
     }
