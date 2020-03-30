@@ -2,6 +2,7 @@ package com.atguigu.horse;
 
 import java.awt.*;
 import java.util.ArrayList;
+
 //com/atguigu/horse/图解.xlsx
 public class HorseChessboard {
     private static int X;//棋盘的列数
@@ -26,6 +27,30 @@ public class HorseChessboard {
         if ((p1.x = curPoint.x - 2) >= 0 && (p1.y = curPoint.y - 1) >= 0) {
             ps.add(new Point(p1));
         }
-
+        //表示马儿可以走6这个位置
+        if ((p1.x = curPoint.x - 1) >= 0 && (p1.y = curPoint.y - 2) >= 0) {
+            ps.add(new Point(p1));
+        }
+        //表示马儿可以走7这个位置
+        if ((p1.x = curPoint.x + 1) >= X && (p1.y = curPoint.y - 2) >= 0) {
+            ps.add(new Point(p1));
+        }
+        //表示马儿可以走0这个位置
+        if ((p1.x = curPoint.x + 2) >= X && (p1.y = curPoint.y - 1) >= 0) {
+            ps.add(new Point(p1));
+        }
+        //表示马儿可以走1这个位置
+        if ((p1.x = curPoint.x + 2) >= X && (p1.y = curPoint.y + 1) < Y) {
+            ps.add(new Point(p1));
+        }
+        //表示马儿可以走2这个位置
+        if ((p1.x = curPoint.x + 1) >= X && (p1.y = curPoint.y + 2) < Y) {
+            ps.add(new Point(p1));
+        }
+        //表示马儿可以走4这个位置
+        if ((p1.x = curPoint.x - 2) >= 0 && (p1.y = curPoint.y + 1) < Y) {
+            ps.add(new Point(p1));
+        }
+        return ps;
     }
 }
