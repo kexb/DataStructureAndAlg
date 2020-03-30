@@ -1,6 +1,7 @@
 package com.atguigu.floyd;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 //佛洛依德算法
 public class FloydAlgorithm {
@@ -32,6 +33,14 @@ class Graph {
     private int[][] dis;
     //保存到达目标顶点的前驱顶点
     private int[][] pre;
+    private static HashMap<Integer, Character> map = new HashMap<>();
+
+    static {
+        char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+        for (int i = 0; i < vertex.length; i++) {
+            map.put(i, vertex[i]);
+        }
+    }
 
     //构造器
     public Graph(int length, int[][] matrix, char[] vertex) {
@@ -69,6 +78,14 @@ class Graph {
             for (int i = 0; i < this.dis.length; i++) {
                 //到达j顶点 [A,B,C,D,E,F,G]
                 for (int j = 0; j < this.dis.length; j++) {
+                    String iStr = map.get(i) + "";
+                    String jStr = map.get(j) + "";
+                    String ijStr = (map.get(i) + "" + map.get(j));
+                    String ijPre = map.get(pre[i][j]) + "";
+
+                    String kjStr = (map.get(k) + "" + map.get(j));
+                    String kjPre = map.get(pre[k][j]) + "";
+
                     //求出从i顶点出发 经过中间顶点k 到达j顶点的距离
                     len = this.dis[i][k] + this.dis[k][j];
                     //如果len小于dis[i][j]
