@@ -19,6 +19,7 @@ public class FloydAlgorithm {
         matrix[6] = new int[]{2, 3, N, N, 4, 6, 0};
         //创建Graph 对象
         Graph graph = new Graph(vertex.length, matrix, vertex);
+        graph.floyd();
         graph.show();
     }
 }
@@ -53,9 +54,30 @@ class Graph {
             System.out.println();
             //输出dis数组的一行
             for (int i = 0; i < dis.length; i++) {
-                System.out.printf("(min<%s,%s>=%s)", this.vertex[k],this.vertex[i], dis[k][i] + "  ");
+                System.out.printf("(min<%s,%s>=%s)", this.vertex[k], this.vertex[i], dis[k][i] + "  ");
             }
             System.out.println();
+        }
+    }
+
+    //佛洛依德算法
+    public void floyd() {
+        int len = 0; //变量保存距离
+        //从中间顶点遍历 k就是中间顶点的下标 //[A,B,C,D,E,F,G]
+        for (int k = 0; k < this.dis.length; k++) {
+            //从i顶点出发 //[A,B,C,D,E,F,G]
+            for (int i = 0; i < this.dis.length; i++) {
+                //到达j顶点 [A,B,C,D,E,F,G]
+                for (int j = 0; j < this.dis.length; j++) {
+                    //求出从i顶点出发 经过中间顶点k 到达j顶点的距离
+                    len = this.dis[i][k] + this.dis[k][j];
+                    //如果len小于dis[i][j]
+                    if (len < this.dis[i][j]) {
+                        this.dis[i][j] = len;//更新距离
+                        this.pre[i][j] = this.pre[k][j];//更新前驱顶点
+                    }
+                }
+            }
         }
     }
 
