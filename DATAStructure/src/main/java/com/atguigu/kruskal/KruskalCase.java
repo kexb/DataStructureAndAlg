@@ -93,7 +93,7 @@ public class KruskalCase {
         //统计并打印'最小生成树'输出rets数组<E,F>=2	<C,D>=3	<D,E>=4	<B,F>=7	<E,G>=8	<A,B>=12
         System.out.println("最小生成树为:");
         for (int i = 0; i < index; i++) {
-            System.out.print(rets[i]+"\t");
+            System.out.print(rets[i] + "\t");
         }
     }
 
@@ -162,10 +162,15 @@ public class KruskalCase {
      * @return 返回的就是下标为i的这个顶点对应的终点的下标
      */
     private int getEnd(int[] ends, int i) {
-        while (ends[i] != 0) {
+        if (ends[i] == 0) {
+            return i;
+        }
+        int tmp = ends[i];
+        while (i != 0) {
+            tmp = i;
             i = ends[i];
         }
-        return i;
+        return tmp;
     }
 
 }
@@ -185,6 +190,6 @@ class EData {
 
     @Override
     public String toString() {
-        return String.format("<%s,%s>=%s",start,end,weight);
+        return String.format("<%s,%s>=%s", start, end, weight);
     }
 }
