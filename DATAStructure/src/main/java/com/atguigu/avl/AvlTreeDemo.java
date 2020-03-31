@@ -280,7 +280,7 @@ class Node {
         if (rightHeight() - leftHeight() > 1) {
             //如果它的右子树的右子树的高度 《 它的右子树的左子树高度
             if (right != null && right.rightHeight() < right.leftHeight()) {
-                rightRotate();
+                right.rightRotate();
             }
             leftRotate();
             return;
