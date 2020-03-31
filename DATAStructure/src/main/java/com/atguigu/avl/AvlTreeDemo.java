@@ -285,7 +285,7 @@ class Node {
             leftRotate();
             return;
         }
-        //添加后一个节点后 如果(左子树的高度-右子树的高度)>1 右旋
+        //添加后一个节点后 如果(左子树的高度-右子树的高度)>1 右旋 
         if (leftHeight() - rightHeight() > 1) {
             //如果左子树的左子树的高度 《 左子树的右子树的高度
             if (left != null && left.leftHeight() < left.rightHeight()) {
