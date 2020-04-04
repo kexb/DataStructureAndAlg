@@ -20,8 +20,8 @@ public class ConsistentHash {
         int hash = getHash(client);
         //大于hash virtualNodes子树的firstKey
         SortedMap<Integer, String> subMap = virtualNodes.tailMap(hash);
-        Integer firstKey=null;
-        if (subMap == null) {
+        Integer firstKey;
+        if (subMap.size() == 0) {
             firstKey = virtualNodes.firstKey();
         } else {
             firstKey = subMap.firstKey();
