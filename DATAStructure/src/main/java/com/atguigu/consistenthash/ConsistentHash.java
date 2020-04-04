@@ -18,7 +18,7 @@ public class ConsistentHash {
 
     public static String getServer(String client) {
         int hash = getHash(client);
-        //大于hash virtualNodes子树的firstKey
+        //截取Key大于等于hash的所有元素
         SortedMap<Integer, String> subMap = virtualNodes.tailMap(hash);
         Integer firstKey;
         if (subMap.size() == 0) {
@@ -48,9 +48,21 @@ public class ConsistentHash {
 
 
     public static void main(String[] args) {
+        //testTailMethod();
         for (int i = 0; i < 12; i++) {
             System.out.println(getServer("client" + i));
         }
+    }
+
+    private static void testTailMethod() {
+        TreeSet<Integer> treeSet=new TreeSet<>();
+        for (int i = 10; i > 0; i--) {
+            treeSet.add(i);
+        }
+        //截取Key大于等于fromKey的所有元素
+        SortedSet<Integer> sortedSet = treeSet.tailSet(5);
+        Integer first = sortedSet.first();
+        Integer last = sortedSet.last();
     }
 }
 
