@@ -60,10 +60,9 @@ public class KmpAlgorithm {
     public static int[] kmpNext(String dest) {
         //创建一个next数组 把偶才能部分匹配值
         int[] next = new int[dest.length()];
-        next[0] = 0;
         for (int i = 1, j = 0; i < dest.length(); i++) {
             while (j > 0 && dest.charAt(i) != dest.charAt(j)) {
-                //回溯 不相等去需要判断回溯的情况 
+                //回溯 不相等去需要判断回溯的情况
                 j = next[j - 1];
             }
             if (dest.charAt(i) == dest.charAt(j)) {
