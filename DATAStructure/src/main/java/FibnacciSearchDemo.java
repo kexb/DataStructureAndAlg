@@ -70,6 +70,8 @@ public class FibnacciSearchDemo {
                 //endregion
                 k -= 2;
             } else {
+                //斐波拉契数组的长度可能会比原始长度来的长 如1, 8, 10, 89, 1000, 1234,1234,1234,1234
+                // 如果寻找1234的时候定位到>=(high+1)的位置 也只返回high
                 if (mid <= high) {
                     return mid;
                 } else {
