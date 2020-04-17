@@ -30,6 +30,7 @@ public class FibnacciSearchDemo {
         int k = 0; //斐波拉契分割数值的下标
         int mid = 0;
         int[] f = fib();
+        //寻找斐波拉契数能够覆盖的长度
         while (high > f[k] - 1) {
             k++;
         }
