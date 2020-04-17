@@ -7,7 +7,7 @@ package com.atguigu.PostThreadBinaryTree;
  * @Date：2017年1月8日 下午3:42:14
  * @Version V1.0
  */
-public class PostThreadBinaryTree {
+public class  PostThreadBinaryTree {
 
     private Node preNode;   //线索化时记录前一个节点
 
