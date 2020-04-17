@@ -58,15 +58,17 @@ public class KnapsackProblem {
             }
             System.out.println();
         }
-        System.out.println("路径记录~~~");
+        System.out.println("\r\n最终路径记录~~~");
         //动脑筋
-        int i = path.length - 1;//行的最大下标
-        int j = path[0].length - 1;//列的最大下标
+        int i = path.length - 1;    //行的最大下标    从最后一种物品开始
+        int j = path[0].length - 1;//列的最大下标     背包容量从最大开始
         while (i > 0 && j > 0) {
             if (path[i][j] == 1) {
                 System.out.printf("第%d个商品放入到背包\n", i);
+                //从最后一种物品开始 每放一个物品背包重量减掉该物品的重量
                 j -= w[i - 1];
             }
+            //转到不包含当前物品的 上一种物品策略
             i--;
         }
     }
