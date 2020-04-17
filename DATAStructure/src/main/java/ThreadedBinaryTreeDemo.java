@@ -42,6 +42,11 @@ class ThreadedBinaryTree {
 
     //遍历线索化二叉树的方法
     public void threadedList() {
+        //                1
+        //
+        //      3                      6
+        //
+        // 8         10           14
         //定义一个变量,存储当前遍历的节点,从root开始
         HeroNode node = root;
         while (node != null) {
