@@ -52,7 +52,7 @@ class ThreadedBinaryTree {
                 node = node.getLeft();
             }
             System.out.println(node);
-            //打印当前节点的右指针指向的是后继节点，就一直输出
+            //打印当前节点的右指针指向的是后继节点，就一直输出  树形如果是一路向左 那么右子树都是空的 可以做右线索
             while (node.getRightType() == 1) {
                 node = node.getRight();
                 System.out.println(node);
