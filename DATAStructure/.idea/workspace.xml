@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dynamic/KnapsackProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dynamic/KnapsackProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HeapSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HeapSortDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +50,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
   </component>
-  <component name="RunManager" selected="Application.KnapsackProblem">
-    <configuration name="FibnacciSearchDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FibnacciSearchDemo" />
+  <component name="RunManager" selected="Application.HeapSortDemo">
+    <configuration name="HeapSortDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HeapSortDemo" />
       <module name="DATAStructure" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,19 +91,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PreThreadBinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.PreThreadBinaryTree.PreThreadBinaryTree" />
-      <module name="DATAStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.PreThreadBinaryTree.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ThreadedBinaryTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.InflixThreadBinaryTree.ThreadedBinaryTreeDemo" />
       <module name="DATAStructure" />
@@ -116,13 +104,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="cir02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cir02" />
+      <module name="DATAStructure" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HeapSortDemo" />
+        <item itemvalue="Application.cir02" />
+        <item itemvalue="Application.PostThreadBinaryTree" />
         <item itemvalue="Application.KnapsackProblem" />
         <item itemvalue="Application.ThreadedBinaryTreeDemo" />
-        <item itemvalue="Application.PreThreadBinaryTree" />
-        <item itemvalue="Application.PostThreadBinaryTree" />
-        <item itemvalue="Application.FibnacciSearchDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +165,10 @@
       <workItem from="1587045836095" duration="10572000" />
       <workItem from="1587089464886" duration="3534000" />
       <workItem from="1587100193527" duration="19375000" />
-      <workItem from="1587151113488" duration="654000" />
+      <workItem from="1587151113488" duration="1358000" />
+      <workItem from="1587178058224" duration="84000" />
+      <workItem from="1587190641302" duration="5671000" />
+      <workItem from="1587215142484" duration="1822000" />
     </task>
     <task id="LOCAL-00001" summary="22">
       <created>1585372666957</created>
@@ -200,6 +198,7 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="22" />
     <option name="LAST_COMMIT_MESSAGE" value="22" />
   </component>
@@ -228,38 +227,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1587113918528" />
-    <state width="1537" height="275" key="GridCell.Tab.0.bottom" timestamp="1587151806409">
+    <state width="1537" height="275" key="GridCell.Tab.0.bottom" timestamp="1587212975038">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587151806409" />
-    <state width="1537" height="275" key="GridCell.Tab.0.center" timestamp="1587151806409">
+    <state width="1537" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587212975038" />
+    <state width="1537" height="275" key="GridCell.Tab.0.center" timestamp="1587212975038">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587151806409" />
-    <state width="1537" height="275" key="GridCell.Tab.0.left" timestamp="1587151806409">
+    <state width="1537" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587212975038" />
+    <state width="1537" height="275" key="GridCell.Tab.0.left" timestamp="1587212975038">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587151806409" />
-    <state width="1537" height="275" key="GridCell.Tab.0.right" timestamp="1587151806409">
+    <state width="1537" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587212975038" />
+    <state width="1537" height="275" key="GridCell.Tab.0.right" timestamp="1587212975038">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587151806409" />
-    <state width="1493" height="157" key="GridCell.Tab.1.bottom" timestamp="1587129133252">
+    <state width="1537" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587212975038" />
+    <state width="1537" height="162" key="GridCell.Tab.1.bottom" timestamp="1587193405578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587129133252" />
-    <state width="1493" height="157" key="GridCell.Tab.1.center" timestamp="1587129133252">
+    <state width="1537" height="162" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587193405578" />
+    <state width="1537" height="162" key="GridCell.Tab.1.center" timestamp="1587193405578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587129133252" />
-    <state width="1493" height="157" key="GridCell.Tab.1.left" timestamp="1587129133252">
+    <state width="1537" height="162" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587193405578" />
+    <state width="1537" height="162" key="GridCell.Tab.1.left" timestamp="1587193405578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587129133252" />
-    <state width="1493" height="157" key="GridCell.Tab.1.right" timestamp="1587129133252">
+    <state width="1537" height="162" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587193405578" />
+    <state width="1537" height="162" key="GridCell.Tab.1.right" timestamp="1587193405578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587129133252" />
+    <state width="1537" height="162" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587193405578" />
     <state x="490" y="154" width="561" height="524" key="StructurePopup" timestamp="1585276434195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -272,10 +271,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="166" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1585984938304" />
-    <state x="377" y="112" width="782" height="600" key="find.popup" timestamp="1587151128957">
+    <state x="377" y="112" width="782" height="600" key="find.popup" timestamp="1587192851491">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="377" y="112" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587151128957" />
+    <state x="377" y="112" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587192851491" />
     <state x="402" y="439" key="run.anything.popup" timestamp="1585553538338">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -295,12 +294,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cir02.java</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cir02.java</url>
-          <line>25</line>
+          <line>26</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -440,7 +439,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/HeapSortDemo.java</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -598,7 +597,18 @@
           <line>77</line>
           <option name="timeStamp" value="272" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cir02.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="rear" language="JAVA" />
+        <watch expression="c.rear" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
