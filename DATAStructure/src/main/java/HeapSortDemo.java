@@ -1,10 +1,10 @@
 import java.util.Arrays;
-
+//https://www.bilibili.com/video/BV1E4411H73v?p=107
 public class HeapSortDemo {
     public static void main(String[] args) {
         //要求将一个数组进行升序排序
         int[] arr = {4, 6, 8, 5, 9, -1, 90, 89, 56, -999};
-        arr=new int[800*10000];
+        arr=new int[8];
         Helper.setRandomNumber2Array(arr);
         System.out.println("len=" + arr.length);
         //System.out.println("第0次数组=" + Arrays.toString(arr));
@@ -30,7 +30,7 @@ public class HeapSortDemo {
             arr[0] = temp;
             adjustHeap(arr, 0, j);
         }
-        //System.out.println("数组=" + Arrays.toString(arr));
+        System.out.println("数组=" + Arrays.toString(arr));
 
     }
 

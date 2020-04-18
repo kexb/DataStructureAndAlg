@@ -1,11 +1,12 @@
 public class cir02 {
-    public static void main1(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         CircleArray c=new CircleArray(6);
         c.addQueue(1);
         c.addQueue(2);
         c.addQueue(3);
         c.addQueue(4);
         c.addQueue(5);
+        c.addQueue(6);
         String pos1=getPos(c);
 
         c.getQueue();
