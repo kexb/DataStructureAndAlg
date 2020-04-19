@@ -1,11 +1,12 @@
 import java.util.Arrays;
+
 //https://www.bilibili.com/video/BV1E4411H73v?p=107
 //src/main/java/堆排序-图解.docx
 public class HeapSortDemo {
     public static void main(String[] args) {
         //要求将一个数组进行升序排序
         int[] arr = {4, 6, 8, 5, 9, -1, 90, 89, 56, -999};
-        arr=new int[8];
+        arr = new int[2000 * 10000];
         Helper.setRandomNumber2Array(arr);
         System.out.println("len=" + arr.length);
         //System.out.println("第0次数组=" + Arrays.toString(arr));
@@ -19,20 +20,27 @@ public class HeapSortDemo {
     //编写一个堆排序的方法
     public static void heapSort(int[] arr) {
         int temp = 0;
-        int count=1;
+        int count = 1;
         //保证每个非叶子树都是大顶堆
         for (int i = arr.length / 2 - 1; i >= 0; i--) {
             adjustHeap(arr, i, arr.length);
             //System.out.printf("第%s次数组=%s\r\n",count++, Arrays.toString(arr));
         }
         for (int j = arr.length - 1; j > 0; j--) {
-            temp = arr[j];
-            arr[j] = arr[0];
-            arr[0] = temp;
+            swap(arr, j);
             adjustHeap(arr, 0, j);
         }
-        System.out.println("数组=" + Arrays.toString(arr));
+        //System.out.println("数组=" + Arrays.toString(arr));
 
+    }
+
+    private static void swap(int[] arr, int j) {
+        int temp = arr[j];
+        arr[j] = arr[0];
+        arr[0] = temp;
+//        arr[0]=arr[0]^arr[j];
+//        arr[j]=arr[0]^arr[j];
+//        arr[0]=arr[0]^arr[j];
     }
 
     /**
@@ -161,7 +169,6 @@ public class HeapSortDemo {
 //5     -999   90
 
 //已经有89,90两个沉到底了 其他同理
-
 
 
 //二叉树性质推导
