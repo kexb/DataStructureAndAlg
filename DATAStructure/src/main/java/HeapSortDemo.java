@@ -6,7 +6,7 @@ public class HeapSortDemo {
     public static void main(String[] args) {
         //要求将一个数组进行升序排序
         int[] arr = {4, 6, 8, 5, 9, -1, 90, 89, 56, -999};
-        arr = new int[2000 * 10000];
+        arr = new int[800 * 10000];
         Helper.setRandomNumber2Array(arr);
         System.out.println("len=" + arr.length);
         //System.out.println("第0次数组=" + Arrays.toString(arr));
@@ -35,12 +35,12 @@ public class HeapSortDemo {
     }
 
     private static void swap(int[] arr, int j) {
-        int temp = arr[j];
-        arr[j] = arr[0];
-        arr[0] = temp;
-//        arr[0]=arr[0]^arr[j];
-//        arr[j]=arr[0]^arr[j];
-//        arr[0]=arr[0]^arr[j];
+//        int temp = arr[j];
+//        arr[j] = arr[0];
+//        arr[0] = temp;
+        arr[0] = arr[0] ^ arr[j];
+        arr[j] = arr[0] ^ arr[j];
+        arr[0] = arr[0] ^ arr[j];
     }
 
     /**
