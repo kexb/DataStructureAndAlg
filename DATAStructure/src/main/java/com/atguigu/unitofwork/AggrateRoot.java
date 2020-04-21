@@ -1,4 +1,4 @@
-package com.atguigu.unitofwork
+package com.atguigu.unitofwork;
 
-interface AggrateRoot {
+public interface AggrateRoot {
 }
