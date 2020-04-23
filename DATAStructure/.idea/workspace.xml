@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/AggrateRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/AggrateRoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/repository/UnitOfWorkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/repository/UnitOfWorkRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/inflixexpression/testinflixExpression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
       <recent name="C:\Project\DataStructureAndAlg\DATAStructure\src\main\java\com\atguigu\util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testUnitOfWork">
+  <component name="RunManager" selected="Application.testinflixExpression">
     <configuration name="HeapSortDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HeapSortDemo" />
       <module name="DATAStructure" />
@@ -97,13 +96,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cir02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cir02" />
-      <module name="DATAStructure" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testUnitOfWork" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.unitofwork.testUnitOfWork" />
       <module name="DATAStructure" />
@@ -117,13 +109,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testinflixExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.inflixexpression.testinflixExpression" />
+      <module name="DATAStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.inflixexpression.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testinflixExpression" />
         <item itemvalue="Application.testUnitOfWork" />
         <item itemvalue="Application.HeapSortDemo" />
         <item itemvalue="Application.LRULinkedHashMap" />
         <item itemvalue="Application.LRUCache" />
-        <item itemvalue="Application.cir02" />
       </list>
     </recent_temporary>
   </component>
@@ -178,6 +183,7 @@
       <workItem from="1587261914873" duration="4897000" />
       <workItem from="1587353058976" duration="16000" />
       <workItem from="1587481005509" duration="4011000" />
+      <workItem from="1587641568285" duration="2718000" />
     </task>
     <task id="LOCAL-00001" summary="22">
       <created>1585372666957</created>
@@ -232,42 +238,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="353" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585374794503" />
-    <state width="492" height="466" key="DebuggerActiveHint" timestamp="1587113918528">
+    <state width="492" height="466" key="DebuggerActiveHint" timestamp="1587643872039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1587113918528" />
-    <state width="1537" height="162" key="GridCell.Tab.0.bottom" timestamp="1587493586149">
+    <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1587643872039" />
+    <state width="1537" height="275" key="GridCell.Tab.0.bottom" timestamp="1587644189646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="162" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587493586149" />
-    <state width="1537" height="162" key="GridCell.Tab.0.center" timestamp="1587493586149">
+    <state width="1537" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587644189646" />
+    <state width="1537" height="275" key="GridCell.Tab.0.center" timestamp="1587644189646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="162" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587493586149" />
-    <state width="1537" height="162" key="GridCell.Tab.0.left" timestamp="1587493586149">
+    <state width="1537" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587644189646" />
+    <state width="1537" height="275" key="GridCell.Tab.0.left" timestamp="1587644189646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="162" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587493586149" />
-    <state width="1537" height="162" key="GridCell.Tab.0.right" timestamp="1587493586149">
+    <state width="1537" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587644189646" />
+    <state width="1537" height="275" key="GridCell.Tab.0.right" timestamp="1587644189646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="162" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587493586149" />
-    <state width="1537" height="162" key="GridCell.Tab.1.bottom" timestamp="1587493580638">
+    <state width="1537" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587644189646" />
+    <state width="1537" height="162" key="GridCell.Tab.1.bottom" timestamp="1587643973298">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="162" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587493580638" />
-    <state width="1537" height="162" key="GridCell.Tab.1.center" timestamp="1587493580638">
+    <state width="1537" height="162" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587643973298" />
+    <state width="1537" height="162" key="GridCell.Tab.1.center" timestamp="1587643973298">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="162" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587493580638" />
-    <state width="1537" height="162" key="GridCell.Tab.1.left" timestamp="1587493580638">
+    <state width="1537" height="162" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587643973298" />
+    <state width="1537" height="162" key="GridCell.Tab.1.left" timestamp="1587643973298">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="162" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587493580638" />
-    <state width="1537" height="162" key="GridCell.Tab.1.right" timestamp="1587493580638">
+    <state width="1537" height="162" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587643973298" />
+    <state width="1537" height="162" key="GridCell.Tab.1.right" timestamp="1587643973298">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="162" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587493580638" />
+    <state width="1537" height="162" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587643973298" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1587265403126">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -280,14 +286,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585372793031" />
-    <state x="499" y="166" key="extract.method.dialog" timestamp="1587263365417">
+    <state x="499" y="166" key="extract.method.dialog" timestamp="1587644116676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="166" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587263365417" />
-    <state x="377" y="112" width="782" height="600" key="find.popup" timestamp="1587485992835">
+    <state x="499" y="166" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587644116676" />
+    <state x="377" y="112" width="782" height="600" key="find.popup" timestamp="1587644022766">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="377" y="112" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587485992835" />
+    <state x="377" y="112" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587644022766" />
     <state x="402" y="439" key="run.anything.popup" timestamp="1585553538338">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -612,7 +618,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/testUnitOfWork.java</url>
-          <line>8</line>
+          <line>6</line>
           <option name="timeStamp" value="274" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -622,11 +628,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="rear" language="JAVA" />
-        <watch expression="c.rear" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
