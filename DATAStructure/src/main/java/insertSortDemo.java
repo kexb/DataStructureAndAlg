@@ -14,14 +14,13 @@ public class insertSortDemo {
     public static void insertSort(int[] arr) {
         //39 29 19
         for (int i = 1; i < arr.length; i++) {
-            int insertIndex = i - 1;
             int insertValue = arr[i];
-            while (insertIndex >= 0 && insertValue < arr[insertIndex]) {
-                arr[insertIndex + 1] = arr[insertIndex];
-                insertIndex--;
+            int j = i;
+            while (j - 1 >= 0 && insertValue < arr[j - 1]) {
+                arr[j] = arr[j - 1];
+                j--;
             }
-            if (insertIndex + 1 != i)
-                arr[insertIndex + 1] = insertValue;
+            arr[j] = insertValue;
         }
     }
 }
