@@ -25,7 +25,7 @@ public class ShellSortDemo {
     }
 
     /**
-     * 希尔排序(位移式) 再慢希尔就爬出来了
+     * 希尔排序(插入排序式) 再慢希尔就爬出来了
      * @param arr
      */
     public static void shellSort2(int[] arr) {
@@ -53,7 +53,7 @@ public class ShellSortDemo {
      */
     public static void shellSort(int[] arr) {
         int temp = 0;
-        int count = 0; 
+        int count = 0;
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < arr.length; i++) {
                 for (int j = i - gap; j >= 0; j -= gap) {
