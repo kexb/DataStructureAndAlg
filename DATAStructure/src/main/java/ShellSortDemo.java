@@ -32,7 +32,7 @@ public class ShellSortDemo {
         //gap代表分成几组 每组 len/gap 个元素 每组多少个不算没关系
         //因为元素可通过公差gap 进行扫描 来自标记（#while->i->gap）的代码
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
-            //下标为i从gap开始 说明前面已经隔了gap个元素开始 如gap=5 0 1 2 3 4 5 
+            //下标为i从gap开始 说明前面已经隔了gap个元素开始 如gap=5 0 1 2 3 4 5
             for (int i = gap; i < arr.length; i++) {
                 int j = i;
                 int temp = arr[j];
@@ -48,7 +48,7 @@ public class ShellSortDemo {
     }
 
     /**
-     * 伪希尔排序(交换式)
+     * 希尔排序(交换式)
      * @param arr
      */
     public static void shellSort(int[] arr) {
