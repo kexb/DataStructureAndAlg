@@ -30,7 +30,7 @@ public class ShellSortDemo {
      */
     public static void shellSort2(int[] arr) {
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
-            //下标为i从gap开始 说明前面已经隔了gap开始 如gap=0+5 0 1 2 3 4 5
+            //下标为i从gap开始 说明前面已经隔了gap个元素开始 如gap=0+5 0 1 2 3 4 5
             for (int i = gap; i < arr.length; i++) {
                 int j = i;
                 int temp = arr[j];
