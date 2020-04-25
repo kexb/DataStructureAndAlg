@@ -22,6 +22,8 @@ public class KmpAlgorithm {
         str1="FFF"+"AAABA"+ str2+"QQQQ";
         index = kmpSearch(str1, str2, kmpNext(str2));
         System.out.println("index=" + index);
+
+        kmpNext("B B B D  E A B B B B B".replace(" ",""));
     }
 
     static int count = 0;
