@@ -8,7 +8,7 @@ public class KmpAlgorithm {
         //AAAACABBCAAAAACABB 子串
         int prexLen="ABBBDABBBBAAAACABBCBAAAACABBCAA".length();
         System.out.println("prexlen="+prexLen);
-        String str1="ABBBDABBBBAAAACABBCBAAAACABBCAAAAAACABBCAAAAACABB";
+        String str1="ABBBDABBBBAAAACABBCBAAAACABBCAA AAAACABBCAAAAACABB".replace(" ","");
         String str2="AAAACABBCAAAAACABB";
         int[] next = kmpNext(str2);
         int index = kmpSearch(str1, str2, next);
