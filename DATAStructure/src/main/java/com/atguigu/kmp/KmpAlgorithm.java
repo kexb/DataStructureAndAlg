@@ -58,9 +58,9 @@ public class KmpAlgorithm {
     public static int[] kmpNext(String dest) {
         //                j   第几次匹配
         //0 1 2 3 0 1 2 3 3
-        //A A A A B A A A ?
+        //A A A A B A A A ?A=3
         //                i  当前扫描的位置
-        //求?号
+        //求?A的位置 上面我先标出答案其实也是3
         //因为是第j次匹配所以从0开始实际反映在数组里是下标j-1 令j=next[j-1] 求出j-1这个下标第几次匹配
         //创建一个next数组 把偶才能部分匹配值
         int[] next = new int[dest.length()];
