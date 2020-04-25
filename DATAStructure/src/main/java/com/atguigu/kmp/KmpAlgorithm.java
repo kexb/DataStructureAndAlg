@@ -1,7 +1,4 @@
 package com.atguigu.kmp;
-
-import java.util.Arrays;
-
 public class KmpAlgorithm {
     public static void main(String[] args) {
         //String str1 = "尚硅谷你 尚硅谷你尚硅 尚硅谷你尚硅谷你尚硅你好";
