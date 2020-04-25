@@ -4,26 +4,18 @@ import java.util.Arrays;
 
 public class KmpAlgorithm {
     public static void main(String[] args) {
-        String str1 = "尚硅谷你 尚硅谷你尚硅 尚硅谷你尚硅谷你尚硅你好";
-        String str2 = "谷你尚";//尚硅谷你尚硅
+        //String str1 = "尚硅谷你 尚硅谷你尚硅 尚硅谷你尚硅谷你尚硅你好";
+        //String str2 = "谷你尚";//尚硅谷你尚硅
 
-//        String str1 = "ABCDABCDEFG";
-//        String str2 = "ABCDEFG";//尚硅谷你尚硅
-
-        System.out.println("=====子串3====");
-        System.out.println(Arrays.toString(kmpNext("AA ABA A A C A A   A  A   D".replace(" ",""))));
-        System.out.println("=====子串3====");
+        //ABBBDABBBBAAAACABBCBAAAACABBCAAAAACABBCAAAAACABB 主串
+        //AAAACABBCAAAAACABB 子串
+        int prexLen="ABBBDABBBBAAAACABBCBAAAACABBCAA".length();
+        System.out.println("prexlen="+prexLen);
+        String str1="ABBBDABBBBAAAACABBCBAAAACABBCAAAAAACABBCAAAAACABB";
+        String str2="AAAACABBCAAAAACABB";
         int[] next = kmpNext(str2);
         int index = kmpSearch(str1, str2, next);
-        System.out.println("index=" + index);
-        System.out.println(count);
-
-        str2="AA ABA A A C A A   A  A   D".replace(" ","");
-        str1="FFF"+"AAABA"+ str2+"QQQQ";
-        index = kmpSearch(str1, str2, kmpNext(str2));
-        System.out.println("index=" + index);
-
-        kmpNext("B B B D  E A B B B B B".replace(" ",""));
+        System.out.println(index);
     }
 
     static int count = 0;
