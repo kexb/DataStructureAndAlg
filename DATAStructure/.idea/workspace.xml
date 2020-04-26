@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/util/HraUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/util/TimeSpan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/xingqiji/computexingqiji.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/ntaijie/njietaijie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/ntaijie/njietaijie.java" afterDir="false" />
-    </list>
+    <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +60,34 @@
       <recent name="C:\Project\DataStructureAndAlg\DATAStructure\src\main\java\com\atguigu\util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.computexingqiji">
+  <component name="RunManager" selected="Application.KmpAlgorithm">
+    <configuration name="KmpAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.kmp.KmpAlgorithm" />
+      <module name="DATAStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.kmp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MiGong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MiGong" />
+      <module name="DATAStructure" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShellSortDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ShellSortDemo" />
+      <module name="DATAStructure" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="computexingqiji" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.xingqiji.computexingqiji" />
       <module name="DATAStructure" />
@@ -80,59 +101,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="njietaijie (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.ntaijie.njietaijie" />
+    <configuration name="insertSortDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="insertSortDemo" />
       <module name="DATAStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.ntaijie.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="njietaijie" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="njietaijie" />
-      <module name="DATAStructure" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testUnitOfWork" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.unitofwork.testUnitOfWork" />
-      <module name="DATAStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.unitofwork.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testinflixExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.inflixexpression.testinflixExpression" />
-      <module name="DATAStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.inflixexpression.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KmpAlgorithm" />
+        <item itemvalue="Application.insertSortDemo" />
+        <item itemvalue="Application.ShellSortDemo" />
+        <item itemvalue="Application.MiGong" />
         <item itemvalue="Application.computexingqiji" />
-        <item itemvalue="Application.njietaijie (1)" />
-        <item itemvalue="Application.njietaijie" />
-        <item itemvalue="Application.testinflixExpression" />
-        <item itemvalue="Application.testUnitOfWork" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +171,9 @@
       <workItem from="1587481005509" duration="4011000" />
       <workItem from="1587641568285" duration="3194000" />
       <workItem from="1587646868676" duration="5316000" />
-      <workItem from="1587652688796" duration="8842000" />
+      <workItem from="1587652688796" duration="9084000" />
+      <workItem from="1587732335086" duration="8444000" />
+      <workItem from="1587787520911" duration="13048000" />
     </task>
     <task id="LOCAL-00001" summary="22">
       <created>1585372666957</created>
@@ -248,38 +232,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1587660474359" />
-    <state width="1537" height="275" key="GridCell.Tab.0.bottom" timestamp="1587661661602">
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom" timestamp="1587836990777">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587661661602" />
-    <state width="1537" height="275" key="GridCell.Tab.0.center" timestamp="1587661661602">
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587836990777" />
+    <state width="1493" height="266" key="GridCell.Tab.0.center" timestamp="1587836990767">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587661661602" />
-    <state width="1537" height="275" key="GridCell.Tab.0.left" timestamp="1587661661601">
+    <state width="1493" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587836990767" />
+    <state width="1493" height="266" key="GridCell.Tab.0.left" timestamp="1587836990767">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587661661601" />
-    <state width="1537" height="275" key="GridCell.Tab.0.right" timestamp="1587661661602">
+    <state width="1493" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587836990767" />
+    <state width="1493" height="266" key="GridCell.Tab.0.right" timestamp="1587836990777">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587661661602" />
-    <state width="1537" height="283" key="GridCell.Tab.1.bottom" timestamp="1587661256968">
+    <state width="1493" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587836990777" />
+    <state width="1493" height="273" key="GridCell.Tab.1.bottom" timestamp="1587836990757">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="283" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587661256968" />
-    <state width="1537" height="283" key="GridCell.Tab.1.center" timestamp="1587661256967">
+    <state width="1493" height="273" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587836990757" />
+    <state width="1493" height="273" key="GridCell.Tab.1.center" timestamp="1587836990757">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="283" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587661256967" />
-    <state width="1537" height="283" key="GridCell.Tab.1.left" timestamp="1587661256967">
+    <state width="1493" height="273" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587836990757" />
+    <state width="1493" height="273" key="GridCell.Tab.1.left" timestamp="1587836990757">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="283" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587661256967" />
-    <state width="1537" height="283" key="GridCell.Tab.1.right" timestamp="1587661256968">
+    <state width="1493" height="273" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587836990757" />
+    <state width="1493" height="273" key="GridCell.Tab.1.right" timestamp="1587836990757">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="283" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587661256968" />
+    <state width="1493" height="273" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587836990757" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1587660839732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -296,18 +280,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="166" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587655241251" />
-    <state x="377" y="112" width="782" height="600" key="find.popup" timestamp="1587644022766">
+    <state x="377" y="112" width="782" height="600" key="find.popup" timestamp="1587736322613">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="377" y="112" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587644022766" />
+    <state x="377" y="112" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587736322613" />
     <state x="402" y="439" key="run.anything.popup" timestamp="1585553538338">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="402" y="439" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585553538338" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587226580907">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587739201616">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587226580907" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587739201616" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -588,21 +572,6 @@
           <option name="timeStamp" value="256" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="260" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="267" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="268" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/PostThreadBinaryTree/PostThreadBinaryTree.java</url>
           <line>128</line>
           <option name="timeStamp" value="270" />
@@ -634,31 +603,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/ntaijie/njietaijie.java</url>
-          <line>192</line>
+          <line>104</line>
           <option name="timeStamp" value="276" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/ntaijie/njietaijie.java</url>
-          <line>181</line>
+          <line>102</line>
           <option name="timeStamp" value="281" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/ntaijie/njietaijie.java</url>
-          <line>130</line>
-          <option name="timeStamp" value="284" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="296" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/ntaijie/njietaijie.java</url>
-          <line>200</line>
-          <option name="timeStamp" value="285" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="297" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/kmp/KmpAlgorithm.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="298" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="date3.getCalendarDate()" language="JAVA" />
-        <watch expression="date1.getCalendarDate()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
