@@ -1,15 +1,20 @@
 package com.atguigu.floyd;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import org.omg.CORBA.MARSHAL;
+
+import java.util.*;
 
 //佛洛依德算法
 public class FloydAlgorithm {
     public static void main(String[] args) {
         //测试看看图是否创建成功
         char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+        HashMap<String,Integer> map=new HashMap<>();
+        String[] str = new String[vertex.length];
+        for (int i = 0; i < vertex.length; i++) {
+            str[i] = vertex[i] + "";
+            map.put(str[i],i);
+        }
         //创建邻接矩阵
         int[][] matrix = new int[vertex.length][vertex.length];
         final int N = 65535;
@@ -25,12 +30,13 @@ public class FloydAlgorithm {
         graph.floyd();
         graph.show();
 
-        int start=3;
-        int end=4;
-        System.out.printf("%s到%s的最短路径====\r\n",2,4);
+        int start = map.get("B");
+        int end = map.get("G");
+        System.out.printf("%s到%s的最短路径====\r\n", start, end);
         List<Integer> theRoad = graph.findTheRoad(graph.getPre(), start, end);
-        String s = Arrays.toString(new List[]{theRoad});
-        System.out.printf(s);
+        for (Integer iroad : theRoad) {
+            System.out.printf(str[iroad] + " ");
+        }
     }
 }
 
@@ -116,20 +122,22 @@ class Graph {
 
     /**
      * 用于输出弗洛伊德算法的路径
-     * @param path 得到的路径矩阵
+     *
+     * @param path  得到的路径矩阵
      * @param start 开始点，注意这个点是从零开始计数的  例如从 0到3
-     * @param end 结束点，也是从零开始计数的
+     * @param end   结束点，也是从零开始计数的
      * @return List数组  返回的值也是从零开始计数的。
      */
-    public List<Integer> findTheRoad(int[][] path, int start, int end){
-        List<Integer> list= new ArrayList<>();
-        list.add(start);
-        int temp=path[start][end];
-        while(temp!=end){
-            list.add(temp);
-            temp=path[temp][end];
+    public List<Integer> findTheRoad(int[][] path, int start, int end) {
+        Stack<Integer> list = new Stack<>();
+        list.push(end);
+        int temp = path[start][end];
+        while (temp != start) {
+            list.push(temp);
+            temp = path[start][temp];
         }
-        list.add(end);
+        list.push(start);
+        Collections.reverse(list);
         return list;
     }
 }
