@@ -1,7 +1,9 @@
 package com.atguigu.floyd;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 //佛洛依德算法
 public class FloydAlgorithm {
@@ -22,6 +24,13 @@ public class FloydAlgorithm {
         Graph graph = new Graph(vertex.length, matrix, vertex);
         graph.floyd();
         graph.show();
+
+        int start=3;
+        int end=4;
+        System.out.printf("%s到%s的最短路径====\r\n",2,4);
+        List<Integer> theRoad = graph.findTheRoad(graph.getPre(), start, end);
+        String s = Arrays.toString(new List[]{theRoad});
+        System.out.printf(s);
     }
 }
 
@@ -33,6 +42,11 @@ class Graph {
     private int[][] dis;
     //保存到达目标顶点的前驱顶点
     private int[][] pre;
+
+    public int[][] getPre() {
+        return pre;
+    }
+
     private static HashMap<Integer, Character> map = new HashMap<>();
 
     static {
@@ -100,4 +114,22 @@ class Graph {
         }
     }
 
+    /**
+     * 用于输出弗洛伊德算法的路径
+     * @param path 得到的路径矩阵
+     * @param start 开始点，注意这个点是从零开始计数的  例如从 0到3
+     * @param end 结束点，也是从零开始计数的
+     * @return List数组  返回的值也是从零开始计数的。
+     */
+    public List<Integer> findTheRoad(int[][] path, int start, int end){
+        List<Integer> list= new ArrayList<>();
+        list.add(start);
+        int temp=path[start][end];
+        while(temp!=end){
+            list.add(temp);
+            temp=path[temp][end];
+        }
+        list.add(end);
+        return list;
+    }
 }
