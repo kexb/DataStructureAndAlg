@@ -98,7 +98,10 @@ class Graph {
             //出发顶点到j顶点的距离
             int start2jDis = vv.getDis(j);
             //如果j顶点没有被访问过 并且len 小于出发顶点到j顶点的距离 就需要更新
-            //len < vv.getDis(j) 例子G->B->D 和 G->F->D  com/atguigu/dijkstra/图解.xlsx 和 53.迪杰斯特拉算法-图解
+            //len < vv.getDis(j)  com/atguigu/dijkstra/图解.xlsx 和 53.迪杰斯特拉算法-图解
+            //如果你是从A从发那么我们已经设置visited[A.index]已经访问过
+            // 这时如果j=A.index没必要比较这段距离，自己到自己的最短距离没有意义
+            // 假设这时访问从B出发 此时j=A.index 而A之前已经访问过 那么这时B到A的距离也没意义（不能往回走）
             if (!vv.in(j) && len < start2jDis) {
                 //出发-》index-》j
                 vv.updatePre(j, index);//j顶点的前驱更新为index顶点
