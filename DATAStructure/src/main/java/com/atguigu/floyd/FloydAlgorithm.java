@@ -49,6 +49,8 @@ class Graph {
         this.pre = new int[length][length];
         //对pre数组初始化 存放的是前驱顶点的下标
         for (int i = 0; i < length; i++) {
+            //如(0,0) (0,1) (0,2) (0,3)的前驱是0
+            //如(i,0) (i,1) (i,2) (i,3)的前驱是i
             Arrays.fill(pre[i], i);
         }
     }
