@@ -1,6 +1,8 @@
+package com.atguigu.FibnacciSearch;
+
 import java.util.Arrays;
 
-public class FibnacciSearchDemo {
+public class FibnacciSearchDemo2 {
     public static int maxSize = 20;
 
     public static void main(String[] args) {

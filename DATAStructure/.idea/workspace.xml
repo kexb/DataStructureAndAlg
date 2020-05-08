@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/FibnacciSearch/FibnacciSearchDemo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FibnacciSearchDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FibnacciSearchDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,27 @@
       <recent name="C:\Project\DataStructureAndAlg\DATAStructure\src\main\java\com\atguigu\util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FindNum1">
+  <component name="RunManager" selected="Application.FibnacciSearchDemo2">
+    <configuration name="FibnacciSearchDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FibnacciSearchDemo" />
+      <module name="DATAStructure" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FibnacciSearchDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.FibnacciSearch.FibnacciSearchDemo2" />
+      <module name="DATAStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.FibnacciSearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FindNum1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.findn_1_number_max.FindNum1" />
       <module name="DATAStructure" />
@@ -89,32 +110,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FloydAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.floyd.FloydAlgorithm" />
-      <module name="DATAStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.floyd.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QueuesToStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.Queue.Simulation.Stack.QueuesToStack" />
-      <module name="DATAStructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.Queue.Simulation.Stack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testUnitOfWork" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.unitofwork.testUnitOfWork" />
       <module name="DATAStructure" />
@@ -130,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FindNum1" />
+        <item itemvalue="Application.FibnacciSearchDemo2" />
+        <item itemvalue="Application.FibnacciSearchDemo" />
         <item itemvalue="Application.FindNum2" />
+        <item itemvalue="Application.FindNum1" />
         <item itemvalue="Application.testUnitOfWork" />
-        <item itemvalue="Application.QueuesToStack" />
-        <item itemvalue="Application.FloydAlgorithm" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +196,7 @@
       <workItem from="1588489834506" duration="2000" />
       <workItem from="1588741555404" duration="6540000" />
       <workItem from="1588816279127" duration="4000" />
-      <workItem from="1588905161582" duration="4594000" />
+      <workItem from="1588905161582" duration="14725000" />
     </task>
     <task id="LOCAL-00001" summary="22">
       <created>1585372666957</created>
@@ -256,46 +251,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="353" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585374794503" />
-    <state width="492" height="466" key="DebuggerActiveHint" timestamp="1588907988655">
+    <state width="492" height="466" key="DebuggerActiveHint" timestamp="1588931182242">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1588907988655" />
+    <state width="492" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1588931182242" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1587903304089">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587903304089" />
-    <state width="1493" height="273" key="GridCell.Tab.0.bottom" timestamp="1588915082705">
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom" timestamp="1588931246619">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588915082705" />
-    <state width="1493" height="273" key="GridCell.Tab.0.center" timestamp="1588915082705">
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588931246619" />
+    <state width="1493" height="266" key="GridCell.Tab.0.center" timestamp="1588931246619">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588915082705" />
-    <state width="1493" height="273" key="GridCell.Tab.0.left" timestamp="1588915082704">
+    <state width="1493" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588931246619" />
+    <state width="1493" height="266" key="GridCell.Tab.0.left" timestamp="1588931246618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588915082704" />
-    <state width="1493" height="273" key="GridCell.Tab.0.right" timestamp="1588915082705">
+    <state width="1493" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588931246618" />
+    <state width="1493" height="266" key="GridCell.Tab.0.right" timestamp="1588931246619">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588915082705" />
-    <state width="1493" height="273" key="GridCell.Tab.1.bottom" timestamp="1588915082705">
+    <state width="1493" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588931246619" />
+    <state width="1493" height="273" key="GridCell.Tab.1.bottom" timestamp="1588931238748">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588915082705" />
-    <state width="1493" height="273" key="GridCell.Tab.1.center" timestamp="1588915082705">
+    <state width="1493" height="273" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588931238748" />
+    <state width="1493" height="273" key="GridCell.Tab.1.center" timestamp="1588931238748">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588915082705" />
-    <state width="1493" height="273" key="GridCell.Tab.1.left" timestamp="1588915082705">
+    <state width="1493" height="273" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588931238748" />
+    <state width="1493" height="273" key="GridCell.Tab.1.left" timestamp="1588931238748">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588915082705" />
-    <state width="1493" height="273" key="GridCell.Tab.1.right" timestamp="1588915082705">
+    <state width="1493" height="273" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588931238748" />
+    <state width="1493" height="273" key="GridCell.Tab.1.right" timestamp="1588931238748">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588915082705" />
+    <state width="1493" height="273" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588931238748" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1587660839732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -308,10 +303,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585372793031" />
-    <state x="499" y="166" key="extract.method.dialog" timestamp="1587655241251">
+    <state x="499" y="166" key="extract.method.dialog" timestamp="1588920869142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="166" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587655241251" />
+    <state x="499" y="166" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1588920869142" />
     <state x="377" y="112" width="782" height="600" key="find.popup" timestamp="1587736322613">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -320,10 +315,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="402" y="439" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585553538338" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588050720080">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588930699442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588050720080" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588930699442" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -472,11 +467,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/FibnacciSearchDemo.java</url>
           <line>26</line>
           <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/FibnacciSearchDemo.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/huffmancode/HuffmanCodeDemo.java</url>
@@ -675,11 +665,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum2.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="321" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum2.java</url>
           <line>33</line>
           <option name="timeStamp" value="322" />
         </line-breakpoint>
@@ -697,6 +682,26 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum1.java</url>
           <line>37</line>
           <option name="timeStamp" value="325" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum2.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="332" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum2.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="334" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/FibnacciSearchDemo.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="335" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/FibnacciSearchDemo.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="337" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
