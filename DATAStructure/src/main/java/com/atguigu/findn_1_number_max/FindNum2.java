@@ -32,15 +32,9 @@ public class FindNum2 {
                     path.add(k);
                 }
             } else {
-                if (maxResult > minResult) {
-                    dp[i] = maxResult;
-                } else {
-                    dp[i] = minResult;
-                }
+                dp[i] = Math.max(maxResult, minResult);
                 path.add(i - 1);
             }
-
-
         }
         if (num[0] > num[1]) {
             if (!path.contains(0)) {
