@@ -1,17 +1,20 @@
 package com.atguigu.findn_1_number_max;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class FindNum {
+public class FindNum2 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("你要测试多少个数的乘积：");
-        int n=sc.nextInt();
-        int[] num=new int[n];
-        for (int i = 0; i <n ; i++) {
-            System.out.println("请输入第"+(i+1)+"个数：");
-            num[i]=sc.nextInt();
-        }
+//        int n=sc.nextInt();
+//        int[] num=new int[n];
+//        for (int i = 0; i <n ; i++) {
+//            System.out.println("请输入第"+(i+1)+"个数：");
+//            num[i]=sc.nextInt();
+//        }
+        int n=4;
+        int[] num= {1,2,3,4};
         int[] dp=new int[n+1];//dp表示长度为n的数组中选取n-1个数字的最大乘积
         int[] min=new int[n+1];//min表示长度为n的数组中选取n-1个数字的最小乘积
         dp[0]=0;
