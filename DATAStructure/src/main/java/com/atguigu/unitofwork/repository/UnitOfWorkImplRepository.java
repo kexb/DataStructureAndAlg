@@ -9,7 +9,7 @@ public class UnitOfWorkImplRepository extends UnitOfWorkRepository {
     public UnitOfWorkImplRepository(UnitOfWork work) {
         setWork(work);
     }
-
+    public UnitOfWorkImplRepository(){}
     @Override
     public void doPut(Connection conn, AggrateRoot root) {
 

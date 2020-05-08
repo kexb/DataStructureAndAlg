@@ -25,6 +25,7 @@ public class FindNum2 {
         min[2]=Math.min(num[0],num[1]);//长度为2时，最小乘积为两个数中的较小值
         for (int i = 3; i <=n ; i++) {
             dp[i]=Math.max(getResult(num,i-1),Math.max(dp[i-1]*num[i-1],min[i-1]*num[i-1]));
+            //Math.min(dp[i-1]*num[i-1],min[i-1]*num[i-1]) 参数1可以变为最小值，参数2也可能是最小值
             min[i]=Math.min(getResult(num,i-1),Math.min(dp[i-1]*num[i-1],min[i-1]*num[i-1]));
         }
         System.out.println(dp[n]);

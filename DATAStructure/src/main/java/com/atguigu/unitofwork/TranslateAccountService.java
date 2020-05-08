@@ -9,6 +9,7 @@ public class TranslateAccountService {
     public TranslateAccountService(UnitOfWork work, UnitOfWorkRepository repository) {
         this.work = work;
         this.repository = repository;
+        this.repository.setWork(work);
     }
 
 
