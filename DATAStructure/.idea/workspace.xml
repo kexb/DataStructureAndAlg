@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1290d564-4170-4fcc-b3c9-a168e82ddc1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/findn_1_number_max/FindNum2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/TranslateAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/TranslateAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/repository/UnitOfWorkImplRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/repository/UnitOfWorkImplRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/testUnitOfWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/unitofwork/testUnitOfWork.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +201,7 @@
       <workItem from="1588489834506" duration="2000" />
       <workItem from="1588741555404" duration="6540000" />
       <workItem from="1588816279127" duration="4000" />
-      <workItem from="1588905161582" duration="4501000" />
+      <workItem from="1588905161582" duration="4594000" />
     </task>
     <task id="LOCAL-00001" summary="22">
       <created>1585372666957</created>
