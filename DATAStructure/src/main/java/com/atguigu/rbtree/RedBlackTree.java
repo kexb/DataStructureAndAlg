@@ -210,17 +210,32 @@ public class RedBlackTree {
         v.pre = u.pre;
     }
 
+    /**        情况1            情况2       情况3
+     *         pre              pre          cur (root)
+     *       /                    \                \
+     *  cur                        cur              y
+     *     \                          \            / \
+     *       y                         y      y.left  y.right
+     *      / \                      /  \
+     * y.left  y.right        y.left    y.right
+     * @param cur 要左旋的节点
+     */
     private void leftRotate(TreeNode cur) {
         TreeNode y = cur.right;
         cur.right = y.left;
         if (y.left != TreeNode.nil) {
             y.left.pre = cur;
         }
+        //情况3
         if (cur.pre == TreeNode.nil) {
             root = y;
-        } else if (cur == cur.pre.left) {
+        }
+        //情况1
+        else if (cur == cur.pre.left) {
             cur.pre.left = y;
-        } else {
+        }
+        //情况2
+        else {
             cur.pre.right = y;
         }
         y.pre = cur.pre;
