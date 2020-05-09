@@ -51,7 +51,7 @@ public class RBTree<T extends Comparable<T>> {
      *
      * @return
      */
-    private RBTreeNode<T> getRoot() {
+    public RBTreeNode<T> getRoot() {
         return root.getLeft();
     }
 
