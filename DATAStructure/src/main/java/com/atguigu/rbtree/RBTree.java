@@ -294,7 +294,6 @@ public class RBTree<T extends Comparable<T>> {
             root.setLeft(node);
             //root node is black
             node.setRed(false);
-            size.incrementAndGet();
         } else {
             RBTreeNode<T> x = findParentNode(node);
             int cmp = x.getValue().compareTo(node.getValue());
@@ -317,8 +316,8 @@ public class RBTree<T extends Comparable<T>> {
             }
 
             fixInsert(node);
-            size.incrementAndGet();
         }
+        size.incrementAndGet();
         return null;
     }
 
