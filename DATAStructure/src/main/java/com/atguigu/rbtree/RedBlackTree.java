@@ -99,7 +99,7 @@ public class RedBlackTree {
 
     public void delete(TreeNode z) {
         TreeNode y = z;
-        TreeNode x = TreeNode.nil;
+        TreeNode x;
         Color originalColor = y.color;
         if (z.left == TreeNode.nil) {
             x = z.right;
