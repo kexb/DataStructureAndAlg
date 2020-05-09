@@ -109,7 +109,9 @@ public class RedBlackTree {
         } else if (cur.right == TreeNode.nil) {
             x = cur.left;
             transplant(cur, cur.left);
-        } else {
+        }
+        //待删除节点有两棵子树
+        else {
             y = minimum(cur.right);
             originalColor = y.color;
             x = y.right;
@@ -393,7 +395,7 @@ public class RedBlackTree {
             nodes.add(node);
             rbt.insert(node);
         }
-        //rbt.delete(five);
+        rbt.delete(nodes.get(5));
         printTree(rbt.getRoot());
     }
 
