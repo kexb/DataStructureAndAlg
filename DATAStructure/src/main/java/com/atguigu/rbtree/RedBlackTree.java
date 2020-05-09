@@ -210,40 +210,40 @@ public class RedBlackTree {
         v.pre = u.pre;
     }
 
-    private void leftRotate(TreeNode x) {
-        TreeNode y = x.right;
-        x.right = y.left;
+    private void leftRotate(TreeNode cur) {
+        TreeNode y = cur.right;
+        cur.right = y.left;
         if (y.left != TreeNode.nil) {
-            y.left.pre = x;
+            y.left.pre = cur;
         }
-        if (x.pre == TreeNode.nil) {
+        if (cur.pre == TreeNode.nil) {
             root = y;
-        } else if (x == x.pre.left) {
-            x.pre.left = y;
+        } else if (cur == cur.pre.left) {
+            cur.pre.left = y;
         } else {
-            x.pre.right = y;
+            cur.pre.right = y;
         }
-        y.pre = x.pre;
-        y.left = x;
-        x.pre = y;
+        y.pre = cur.pre;
+        y.left = cur;
+        cur.pre = y;
     }
 
-    private void rightRotate(TreeNode x) {
-        TreeNode y = x.left;
-        x.left = y.right;
+    private void rightRotate(TreeNode cur) {
+        TreeNode y = cur.left;
+        cur.left = y.right;
         if (y.right != TreeNode.nil) {
-            y.right.pre = x;
+            y.right.pre = cur;
         }
-        if (x.pre == TreeNode.nil) {
+        if (cur.pre == TreeNode.nil) {
             root = y;
-        } else if (x == x.pre.left) {
-            x.pre.left = y;
+        } else if (cur == cur.pre.left) {
+            cur.pre.left = y;
         } else {
-            x.pre.right = y;
+            cur.pre.right = y;
         }
-        y.pre = x.pre;
-        y.right = x;
-        x.pre = y;
+        y.pre = cur.pre;
+        y.right = cur;
+        cur.pre = y;
     }
 
     private void insertionFixup(TreeNode cur) {
