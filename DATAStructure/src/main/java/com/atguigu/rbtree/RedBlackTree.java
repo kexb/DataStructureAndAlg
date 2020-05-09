@@ -243,6 +243,16 @@ public class RedBlackTree {
         cur.pre = y;
     }
 
+    /**             情况1       情况2               情况3
+     *              pre         pre                 cur(root)
+     *            /               \                 /
+     *          cur               cur              y
+     *         /                  /              /  \
+     *       y                   y           y.left  y.right
+     *     /  \                /  \
+     * y.left  y.right     y.left  y.right
+     * @param cur
+     */
     private void rightRotate(TreeNode cur) {
         TreeNode y = cur.left;
         cur.left = y.right;
