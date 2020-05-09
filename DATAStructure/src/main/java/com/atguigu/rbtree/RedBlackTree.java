@@ -33,10 +33,10 @@ public class RedBlackTree {
         if (x.right != TreeNode.nil) {
             return minimum(x.right);
         } else {
-            TreeNode y = x.p;
+            TreeNode y = x.pre;
             while (y != null && x == y.right) {
                 x = y;
-                y = y.p;
+                y = y.pre;
             }
             return y;
         }
@@ -49,10 +49,10 @@ public class RedBlackTree {
         if (x.left != TreeNode.nil) {
             return maximum(x.left);
         } else {
-            TreeNode y = x.p;
+            TreeNode y = x.pre;
             while (y != null && x == y.left) {
                 x = y;
-                y = y.p;
+                y = y.pre;
             }
             return y;
         }
@@ -83,7 +83,7 @@ public class RedBlackTree {
                 t = t.right;
             }
         }
-        node.p = p;
+        node.pre = p;
         if (p == TreeNode.nil) {
             root = node;
         } else if (node.key > p.key) {
@@ -111,16 +111,16 @@ public class RedBlackTree {
             y = minimum(z.right);
             originalColor = y.color;
             x = y.right;
-            if (y.p == z) {
-                x.p = y;
+            if (y.pre == z) {
+                x.pre = y;
             } else {
                 transplant(y, y.right);
                 y.right = z.right;
-                y.right.p = y;
+                y.right.pre = y;
             }
             transplant(z, y);
             y.left = z.left;
-            y.left.p = y;
+            y.left.pre = y;
             y.color = z.color;
         }
         if (originalColor == Color.BLACK) {
@@ -130,48 +130,48 @@ public class RedBlackTree {
 
     private void deletionFixup(TreeNode x) {
         while (x != root && x.color == Color.BLACK) {
-            if (x == x.p.left) {
-                TreeNode w = x.p.right;
+            if (x == x.pre.left) {
+                TreeNode w = x.pre.right;
                 if (w.color == Color.RED) {
                     w.color = Color.BLACK;
-                    w.p.color = Color.RED;
-                    leftRotate(x.p);
-                    w = x.p.right;
+                    w.pre.color = Color.RED;
+                    leftRotate(x.pre);
+                    w = x.pre.right;
                 } else if (w.left.color == Color.BLACK && w.right.color == Color.BLACK) {
                     w.color = Color.RED;
-                    x = x.p;
+                    x = x.pre;
                 } else if (w.right.color == Color.BLACK) {
                     w.left.color = Color.BLACK;
                     w.color = Color.RED;
                     rightRotate(w);
-                    w = x.p.right;
+                    w = x.pre.right;
                 } else {
-                    w.color = x.p.color;
-                    x.p.color = Color.BLACK;
+                    w.color = x.pre.color;
+                    x.pre.color = Color.BLACK;
                     w.right.color = Color.BLACK;
-                    leftRotate(x.p);
+                    leftRotate(x.pre);
                     x = root;
                 }
             } else {
-                TreeNode w = x.p.left;
+                TreeNode w = x.pre.left;
                 if (w.color == Color.RED) {
                     w.color = Color.BLACK;
-                    w.p.color = Color.RED;
-                    rightRotate(x.p);
-                    w = x.p.left;
+                    w.pre.color = Color.RED;
+                    rightRotate(x.pre);
+                    w = x.pre.left;
                 } else if (w.right.color == Color.BLACK && w.left.color == Color.BLACK) {
                     w.color = Color.RED;
-                    x = x.p;
+                    x = x.pre;
                 } else if (w.left.color == Color.BLACK) {
                     w.right.color = Color.BLACK;
                     w.color = Color.RED;
                     leftRotate(w);
-                    w = x.p.left;
+                    w = x.pre.left;
                 } else {
-                    w.color = x.p.color;
-                    x.p.color = Color.BLACK;
+                    w.color = x.pre.color;
+                    x.pre.color = Color.BLACK;
                     w.left.color = Color.BLACK;
-                    rightRotate(x.p);
+                    rightRotate(x.pre);
                     x = root;
                 }
             }
@@ -200,83 +200,83 @@ public class RedBlackTree {
     }
 
     private void transplant(TreeNode u, TreeNode v) {
-        if (u.p == TreeNode.nil) {
+        if (u.pre == TreeNode.nil) {
             root = v;
-        } else if (u == u.p.left) {
-            u.p.left = v;
+        } else if (u == u.pre.left) {
+            u.pre.left = v;
         } else {
-            u.p.right = v;
+            u.pre.right = v;
         }
-        v.p = u.p;
+        v.pre = u.pre;
     }
 
     private void leftRotate(TreeNode x) {
         TreeNode y = x.right;
         x.right = y.left;
         if (y.left != TreeNode.nil) {
-            y.left.p = x;
+            y.left.pre = x;
         }
-        if (x.p == TreeNode.nil) {
+        if (x.pre == TreeNode.nil) {
             root = y;
-        } else if (x == x.p.left) {
-            x.p.left = y;
+        } else if (x == x.pre.left) {
+            x.pre.left = y;
         } else {
-            x.p.right = y;
+            x.pre.right = y;
         }
-        y.p = x.p;
+        y.pre = x.pre;
         y.left = x;
-        x.p = y;
+        x.pre = y;
     }
 
     private void rightRotate(TreeNode x) {
         TreeNode y = x.left;
         x.left = y.right;
         if (y.right != TreeNode.nil) {
-            y.right.p = x;
+            y.right.pre = x;
         }
-        if (x.p == TreeNode.nil) {
+        if (x.pre == TreeNode.nil) {
             root = y;
-        } else if (x == x.p.left) {
-            x.p.left = y;
+        } else if (x == x.pre.left) {
+            x.pre.left = y;
         } else {
-            x.p.right = y;
+            x.pre.right = y;
         }
-        y.p = x.p;
+        y.pre = x.pre;
         y.right = x;
-        x.p = y;
+        x.pre = y;
     }
 
-    private void insertionFixup(TreeNode z) {
-        while (z.p.color == Color.RED) {
-            if (z.p == z.p.p.left) {
-                TreeNode y = z.p.p.right;
+    private void insertionFixup(TreeNode cur) {
+        while (cur.pre.color == Color.RED) {
+            if (cur.pre == cur.pre.pre.left) {//先向左
+                TreeNode y = cur.pre.pre.right;
                 if (y.color == Color.RED) {
-                    z.p.color = Color.BLACK;
+                    cur.pre.color = Color.BLACK;
                     y.color = Color.BLACK;
-                    z.p.p.color = Color.RED;
-                    z = z.p.p;
-                } else if (z == z.p.right) {
-                    z = z.p;
-                    leftRotate(z);
+                    cur.pre.pre.color = Color.RED;
+                    cur = cur.pre.pre;
+                } else if (cur == cur.pre.right) {
+                    cur = cur.pre;
+                    leftRotate(cur);
                 } else {
-                    z.p.color = Color.BLACK;
-                    z.p.p.color = Color.RED;
-                    rightRotate(z.p.p);
+                    cur.pre.color = Color.BLACK;
+                    cur.pre.pre.color = Color.RED;
+                    rightRotate(cur.pre.pre);
                 }
             } else {
-                TreeNode y = z.p.p.left;
+                TreeNode y = cur.pre.pre.left;
                 if (y.color == Color.RED) {
-                    z.p.color = Color.BLACK;
+                    cur.pre.color = Color.BLACK;
                     y.color = Color.BLACK;
-                    z.p.p.color = Color.RED;
-                    z = z.p.p;
-                } else if (z == z.p.left) {
-                    z = z.p;
-                    rightRotate(z);
+                    cur.pre.pre.color = Color.RED;
+                    cur = cur.pre.pre;
+                } else if (cur == cur.pre.left) {
+                    cur = cur.pre;
+                    rightRotate(cur);
                 } else {
-                    z.p.color = Color.BLACK;
-                    z.p.p.color = Color.RED;
-                    leftRotate(z.p.p);
+                    cur.pre.color = Color.BLACK;
+                    cur.pre.pre.color = Color.RED;
+                    leftRotate(cur.pre.pre);
                 }
             }
         }
@@ -315,7 +315,7 @@ public class RedBlackTree {
         int key;
         TreeNode left = nil;
         TreeNode right = nil;
-        TreeNode p = nil;
+        TreeNode pre = nil;
 
         public TreeNode(int key) {
             this.key = key;
