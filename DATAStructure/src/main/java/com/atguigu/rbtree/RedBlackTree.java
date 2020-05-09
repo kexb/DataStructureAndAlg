@@ -73,23 +73,23 @@ public class RedBlackTree {
     }
 
     public void insert(TreeNode node) {
-        TreeNode p = TreeNode.nil;
+        TreeNode pre = TreeNode.nil;
         TreeNode t = root;
         while (t != TreeNode.nil) {
-            p = t;
+            pre = t;
             if (node.key < t.key) {
                 t = t.left;
             } else {
                 t = t.right;
             }
         }
-        node.pre = p;
-        if (p == TreeNode.nil) {
+        node.pre = pre;
+        if (pre == TreeNode.nil) {
             root = node;
-        } else if (node.key > p.key) {
-            p.right = node;
+        } else if (node.key > pre.key) {
+            pre.right = node;
         } else {
-            p.left = node;
+            pre.left = node;
         }
         node.color = Color.RED;
         node.left = TreeNode.nil;
