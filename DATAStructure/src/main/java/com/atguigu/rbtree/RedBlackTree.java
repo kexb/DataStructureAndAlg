@@ -203,15 +203,15 @@ public class RedBlackTree {
         return x;
     }
 
-    private void transplant(TreeNode u, TreeNode v) {
-        if (u.pre == TreeNode.nil) {
-            root = v;
-        } else if (u == u.pre.left) {
-            u.pre.left = v;
+    private void transplant(TreeNode cur, TreeNode y) {
+        if (cur.pre == TreeNode.nil) {
+            root = y;
+        } else if (cur == cur.pre.left) {
+            cur.pre.left = y;
         } else {
-            u.pre.right = v;
+            cur.pre.right = y;
         }
-        v.pre = u.pre;
+        y.pre = cur.pre;
     }
 
     /**
