@@ -1,6 +1,8 @@
 package com.atguigu.rbtree;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class RedBlackTree {
@@ -210,14 +212,16 @@ public class RedBlackTree {
         v.pre = u.pre;
     }
 
-    /**        情况1            情况2       情况3
-     *         pre              pre          cur (root)
-     *       /                    \                \
-     *  cur                        cur              y
-     *     \                          \            / \
-     *       y                         y      y.left  y.right
-     *      / \                      /  \
+    /**
+     * 情况1            情况2       情况3
+     * pre              pre          cur (root)
+     * /                    \                \
+     * cur                        cur              y
+     * \                          \            / \
+     * y                         y      y.left  y.right
+     * / \                      /  \
      * y.left  y.right        y.left    y.right
+     *
      * @param cur 要左旋的节点
      */
     private void leftRotate(TreeNode cur) {
@@ -243,14 +247,16 @@ public class RedBlackTree {
         cur.pre = y;
     }
 
-    /**             情况1       情况2               情况3
-     *              pre         pre                 cur(root)
-     *            /               \                 /
-     *          cur               cur              y
-     *         /                  /              /  \
-     *       y                   y           y.left  y.right
-     *     /  \                /  \
+    /**
+     * 情况1       情况2               情况3
+     * pre         pre                 cur(root)
+     * /               \                 /
+     * cur               cur              y
+     * /                  /              /  \
+     * y                   y           y.left  y.right
+     * /  \                /  \
      * y.left  y.right     y.left  y.right
+     *
      * @param cur
      */
     private void rightRotate(TreeNode cur) {
@@ -381,8 +387,11 @@ public class RedBlackTree {
     public static void main(String[] args) {
         RedBlackTree rbt = new RedBlackTree();
         int n = 10;
+        List<TreeNode> nodes = new ArrayList<>();
         for (int j = 1; j <= n; j++) {
-            rbt.insert(new TreeNode(j));
+            TreeNode node = new TreeNode(j);
+            nodes.add(node);
+            rbt.insert(node);
         }
         //rbt.delete(five);
         printTree(rbt.getRoot());
