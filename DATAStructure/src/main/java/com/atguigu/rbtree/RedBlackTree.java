@@ -267,26 +267,37 @@ public class RedBlackTree {
                     //对父节点左旋
                     leftRotate(cur);
                 }
-                //一直向左 令父节点变黑 祖父节点变红
+                //一直向左 令父节点变黑 祖父节点变红 祖父节点右旋
                 else {
                     father.color = Color.BLACK;
                     grandfather.color = Color.RED;
                     rightRotate(grandfather);
                 }
-            } else {
-                TreeNode y = cur.pre.pre.left;
-                if (y.color == Color.RED) {
-                    cur.pre.color = Color.BLACK;
-                    y.color = Color.BLACK;
-                    cur.pre.pre.color = Color.RED;
+            }
+            //先向右
+            else {
+                TreeNode uncle = cur.pre.pre.left;
+                TreeNode father = cur.pre;
+                TreeNode grandfather = cur.pre.pre;
+                //如果叔叔是红节点 则父变黑 叔变黑 祖父变红
+                if (uncle.color == Color.RED) {
+                    father.color = Color.BLACK;
+                    uncle.color = Color.BLACK;
+                    grandfather.color = Color.RED;
                     cur = cur.pre.pre;
-                } else if (cur == cur.pre.left) {
+                }
+                //先向右 再向左
+                else if (cur == cur.pre.left) {
+                    //当前节点 指向父节点
                     cur = cur.pre;
+                    //并对父节点右旋
                     rightRotate(cur);
-                } else {
-                    cur.pre.color = Color.BLACK;
-                    cur.pre.pre.color = Color.RED;
-                    leftRotate(cur.pre.pre);
+                }
+                //一直向右 父节点变黑 祖父节点变红 祖父节点左旋
+                else {
+                    father.color = Color.BLACK;
+                    grandfather.color = Color.RED;
+                    leftRotate(grandfather);
                 }
             }
         }
