@@ -99,31 +99,31 @@ public class RedBlackTree {
         insertionFixup(node);
     }
 
-    public void delete(TreeNode z) {
-        TreeNode y = z;
+    public void delete(TreeNode cur) {
+        TreeNode y = cur;
         TreeNode x;
         Color originalColor = y.color;
-        if (z.left == TreeNode.nil) {
-            x = z.right;
-            transplant(z, z.right);
-        } else if (z.right == TreeNode.nil) {
-            x = z.left;
-            transplant(z, z.left);
+        if (cur.left == TreeNode.nil) {
+            x = cur.right;
+            transplant(cur, cur.right);
+        } else if (cur.right == TreeNode.nil) {
+            x = cur.left;
+            transplant(cur, cur.left);
         } else {
-            y = minimum(z.right);
+            y = minimum(cur.right);
             originalColor = y.color;
             x = y.right;
-            if (y.pre == z) {
+            if (y.pre == cur) {
                 x.pre = y;
             } else {
                 transplant(y, y.right);
-                y.right = z.right;
+                y.right = cur.right;
                 y.right.pre = y;
             }
-            transplant(z, y);
-            y.left = z.left;
+            transplant(cur, y);
+            y.left = cur.left;
             y.left.pre = y;
-            y.color = z.color;
+            y.color = cur.color;
         }
         if (originalColor == Color.BLACK) {
             deletionFixup(x);
