@@ -247,21 +247,31 @@ public class RedBlackTree {
     }
 
     private void insertionFixup(TreeNode cur) {
-        while (cur.pre.color == Color.RED) {
+        while (cur.pre.color == Color.RED) {//插入节点的前一个节点是红色
             if (cur.pre == cur.pre.pre.left) {//先向左
-                TreeNode y = cur.pre.pre.right;
-                if (y.color == Color.RED) {
-                    cur.pre.color = Color.BLACK;
-                    y.color = Color.BLACK;
-                    cur.pre.pre.color = Color.RED;
+                TreeNode grandfather = cur.pre.pre;//祖父
+                TreeNode uncle = grandfather.right;//叔叔
+                TreeNode father = cur.pre;//老爹
+
+                //如果叔叔是红色的节点，需要进行变色 父变黑 叔变黑 祖父变红
+                if (uncle.color == Color.RED) {
+                    father.color = Color.BLACK;
+                    uncle.color = Color.BLACK;
+                    grandfather.color = Color.RED;
                     cur = cur.pre.pre;
-                } else if (cur == cur.pre.right) {
+                }
+                //先向左 再向右
+                else if (cur == cur.pre.right) {
+                    //移动到父节点
                     cur = cur.pre;
+                    //对父节点左旋
                     leftRotate(cur);
-                } else {
-                    cur.pre.color = Color.BLACK;
-                    cur.pre.pre.color = Color.RED;
-                    rightRotate(cur.pre.pre);
+                }
+                //一直向左 令父节点变黑 祖父节点变红
+                else {
+                    father.color = Color.BLACK;
+                    grandfather.color = Color.RED;
+                    rightRotate(grandfather);
                 }
             } else {
                 TreeNode y = cur.pre.pre.left;
@@ -342,7 +352,7 @@ public class RedBlackTree {
     }
 
     private static void printTree(TreeNode node) {
-        if (node == null||node.key==-999) return;
+        if (node == null || node.key == -999) return;
         Integer leftKey = null, rightKey = null;
         if (node.left != null) {
             leftKey = node.left.key;
