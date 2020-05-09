@@ -129,7 +129,7 @@ class AVLTree {
                 //targetNode是parent的左子节点
                 if (parent.left.value == value) {
                     parent.left = targetNode.left;
-                } else {
+                } else {//targetNode是parent的右子节点
                     parent.right = targetNode.left;
                 }
             } else {//说明要删除的节点只有右子节点
