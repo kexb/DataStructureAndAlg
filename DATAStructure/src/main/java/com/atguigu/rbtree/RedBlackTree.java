@@ -326,6 +326,7 @@ public class RedBlackTree {
                 }
             }
         }
+        //根节点一定是黑色的
         root.color = Color.BLACK;
     }
 
