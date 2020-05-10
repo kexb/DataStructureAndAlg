@@ -395,12 +395,14 @@ public class RedBlackTree {
         RedBlackTree rbt = new RedBlackTree();
         int n = 10;
         List<TreeNode> nodes = new ArrayList<>();
+        //文档：9.红黑树-右插入-图解.note
+        //链接：http://note.youdao.com/noteshare?id=f5565a82ff679522d55269b920a5ebf0&sub=2238D7BF558C446197C458FB6AE067BA
         for (int j = 1; j <= n; j++) {
             TreeNode node = new TreeNode(j);
             nodes.add(node);
             rbt.insert(node);
         }
-        rbt.delete(nodes.get(5));
+        //rbt.delete(nodes.get(5));
         printTree(rbt.getRoot());
     }
 
