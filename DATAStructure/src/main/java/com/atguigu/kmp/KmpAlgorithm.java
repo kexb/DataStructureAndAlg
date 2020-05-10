@@ -67,8 +67,9 @@ public class KmpAlgorithm {
     }
 
     //获取到一个字符串(子串)的部分匹配值表
-    //A	A	A	A	C	A	B	B	C	A	A	A	A	A	C	A	B	B
-    //0	1	2	3	0	1	0	0	0	1	2	3	4	4	5	6	7	8
+    //A	 A	A	A	C	A	B	B	C	A	A	A	A	A	C	A	B	B  搜索字符串
+    //0	 1	2	3	0	1	0	0	0	1	2	3	4	4	5	6	7	8  next[]
+    //0  1  2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17 index
     public static int[] kmpNext(String dest) {
         //                j   第几次匹配
         //0 1 2 3 0 1 2 3 3
