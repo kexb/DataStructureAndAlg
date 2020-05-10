@@ -203,15 +203,15 @@ public class RedBlackTree {
         return x;
     }
 
-    private void transplant(TreeNode cur, TreeNode y) {
-        if (cur.pre == TreeNode.nil) {
-            root = y;
-        } else if (cur == cur.pre.left) {
-            cur.pre.left = y;
+    private void transplant(TreeNode y1, TreeNode y2) {
+        if (y1.pre == TreeNode.nil) {
+            root = y2;
+        } else if (y1 == y1.pre.left) {
+            y1.pre.left = y2;
         } else {
-            cur.pre.right = y;
+            y1.pre.right = y2;
         }
-        y.pre = cur.pre;
+        y2.pre = y1.pre;
     }
 
     /**
@@ -279,6 +279,11 @@ public class RedBlackTree {
         cur.pre = y;
     }
 
+    /**
+     *  文档：11.红黑树-综合-图解.note
+     *  链接：http://note.youdao.com/noteshare?id=2ad8de660bc5e6683ead05f2e47fcefb&sub=F84F445C05B94231AE17AEE3ACA24727
+     * @param cur 当前插入的节点
+     */
     private void insertionFixup(TreeNode cur) {
         while (cur.pre.color == Color.RED) {//插入节点的前一个节点是红色
             if (cur.pre == cur.pre.pre.left) {//先向左
