@@ -1,4 +1,7 @@
 package com.atguigu.kmp;
+
+import java.util.Arrays;
+
 public class KmpAlgorithm {
     public static void main(String[] args) {
         //String str1 = "尚硅谷你 尚硅谷你尚硅 尚硅谷你尚硅谷你尚硅你好";
@@ -11,6 +14,15 @@ public class KmpAlgorithm {
         String str1="ABBBDABBBBAAAACABBCBAAAACABBCAA AAAACABBCAAAAACABB".replace(" ","");
         String str2="AAAACABBCAAAAACABB";
         int[] next = kmpNext(str2);
+        for (int i = 0; i < next.length; i++) {
+            System.out.print(str2.charAt(i)+"\t");
+        }
+        System.out.println();
+        for (int i = 0; i < next.length; i++) {
+            System.out.print(next[i]+"\t");
+        }
+        System.out.println();
+        System.out.println("====================");
         int index = kmpSearch(str1, str2, next);
         System.out.println(index);
     }
@@ -55,6 +67,8 @@ public class KmpAlgorithm {
     }
 
     //获取到一个字符串(子串)的部分匹配值表
+    //A	A	A	A	C	A	B	B	C	A	A	A	A	A	C	A	B	B
+    //0	1	2	3	0	1	0	0	0	1	2	3	4	4	5	6	7	8
     public static int[] kmpNext(String dest) {
         //                j   第几次匹配
         //0 1 2 3 0 1 2 3 3
