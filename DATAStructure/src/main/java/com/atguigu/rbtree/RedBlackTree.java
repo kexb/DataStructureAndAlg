@@ -214,33 +214,51 @@ public class RedBlackTree {
         y2.pre = y1.pre;
     }
 
+
     /**
-     * 情况1            情况2       情况3
-     * pre              pre          cur (root)
-     * /                    \                \
-     * cur                        cur              y
-     * \                          \            / \
-     * y                         y      y.left  y.right
-     * / \                      /  \
-     * y.left  y.right        y.left    y.right
      *
      * @param cur 要左旋的节点
      */
     private void leftRotate(TreeNode cur) {
         TreeNode y = cur.right;
+        //#region cur和y.left关系构建
         cur.right = y.left;
         if (y.left != TreeNode.nil) {
             y.left.pre = cur;
         }
-        //情况3
+        //endregion
+        /**   情况1
+         *   cur(root)
+         *         \
+         *          y
+         *        /   \
+         *    y.left   y.right
+         */
         if (cur.pre == TreeNode.nil) {
             root = y;
         }
-        //情况1
+        /**
+         *     情况2
+         *      pre
+         *      /
+         *   cur
+         *     \
+         *      y
+         *    /   \
+         * y.left   y.right
+         **/
         else if (cur == cur.pre.left) {
             cur.pre.left = y;
         }
-        //情况2
+        /** 情况3
+         *  pre
+         *    \
+         *     cur
+         *       \
+         *         y
+         *     /     \
+         *   y.left    y.right
+         **/
         else {
             cur.pre.right = y;
         }
@@ -280,8 +298,9 @@ public class RedBlackTree {
     }
 
     /**
-     *  文档：11.红黑树-综合-图解.note
-     *  链接：http://note.youdao.com/noteshare?id=2ad8de660bc5e6683ead05f2e47fcefb&sub=F84F445C05B94231AE17AEE3ACA24727
+     * 文档：11.红黑树-综合-图解.note
+     * 链接：http://note.youdao.com/noteshare?id=2ad8de660bc5e6683ead05f2e47fcefb&sub=F84F445C05B94231AE17AEE3ACA24727
+     *
      * @param cur 当前插入的节点
      */
     private void insertionFixup(TreeNode cur) {
