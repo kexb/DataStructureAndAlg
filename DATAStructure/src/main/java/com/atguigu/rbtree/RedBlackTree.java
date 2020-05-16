@@ -221,12 +221,15 @@ public class RedBlackTree {
      */
     private void leftRotate(TreeNode cur) {
         TreeNode y = cur.right;
+
         //#region cur和y.left关系构建
         cur.right = y.left;
         if (y.left != TreeNode.nil) {
             y.left.pre = cur;
         }
         //endregion
+
+        //#region 旋转后新的根
         /**   情况1
          *   cur(root)
          *         \
@@ -262,8 +265,13 @@ public class RedBlackTree {
         else {
             cur.pre.right = y;
         }
+        //endregion
+
+        //确认新根和pre的关系
         y.pre = cur.pre;
+        //新根和cur的关系
         y.left = cur;
+        //左旋后左节点和新根的关系
         cur.pre = y;
     }
 
