@@ -11,10 +11,14 @@ public class KmpAlgorithm {
         //AAAACABBCAAAAACABB 子串
         int prexLen="ABBBDABBBBAAAACABBCBAAAACABBCAA".length();
         System.out.println("prexlen="+prexLen);
-        String str1="C\t C\tC\tC\tC\tC\tC\tC\tC\tA\tA\tA\tA\tC\tA\tB\tB\tC\tA A A A\tC A\tB B\tC A\tA A\tA A\tC A B B"
+        String str1="C\t C\tC\tC\tC\tC\tC\tC\tC\tA\tA\tB\tB\tC\tA\tB\tB\tC\tA\t A\tB\tB\tC\tA\tB\tB\tC\tA\tA\tA\tB\tB\tC\tA\tB\tB"
                 .replace("\t","")
                 .replace(" ","");
         String str2="AAAACABBCAAAAACABB";
+        String dest="A\t A\tB\tB\tC\tA\tB\tB\tC\tA\tA\tA\tB\tB\tC\tA\tB\tB"
+                .replace("\t","")
+                .replace(" ","");
+        str2=dest;
         int[] next = kmpNext(str2);
         for (int i = 0; i < next.length; i++) {
             System.out.print(str2.charAt(i)+"\t");
@@ -68,21 +72,24 @@ public class KmpAlgorithm {
         return -1;
     }
 
-    //获取到一个字符串(子串)的部分匹配值表 从index=9 next[9]=1 I=13开始测试
+    //示例1：获取到一个字符串(子串)的部分匹配值表 从index=9 next[9]=1
     //                                              4   4
     //                                  ↓   ↓   ↓   ↓   ↓                   ↓指示匹配点(REAL)
-    //C	 C	C	C	C	C	C	C	C	A	A	A	A	C	A	B	B	C	A A A A	C A	B B	C A	A A	A A	C A B B原始字符串
-    //A	 A	A	A	C	A	B	B	C	A	A	A	A	A	C	A	B	B  搜索字符串
-    //0	 1	2	3	0	1	0	0	0	1	2	3	4	4	5	6	7	8  next[]
+    //C	 C	C	C	C	C	C	C	C	A	A	B	B	C	A	B	B	C	A	 A	B	B	C	A	B	B	C	A	A	A	B	B	C	A	B	B原始字符串1
+    //                                      2   2
+    //                                  ↓   ↓   ↓   ↓   ↓                   ↓指示匹配点(REAL)
+    //A	 A	B	B	C	A	B	B	C	A	A	A	B	B	C	A	B	B  搜索字符串1
+    //0	 1	2	3	0	1	0	0	0	1	2	2	3	4	5	6	7	8  next1[]
+    //0  1  2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17 index
+
+
+    //示例2：获取到一个字符串(子串)的部分匹配值表 从index=9 next[9]=1
+    //C	 C	C	C	C	C	C	C	C	A	A	A	A	C	A	B	B	C	A	 A	A	A	C	A	B	B	C	A	A	A	B	B	C	A	B	B原始字符串1
+    //                                  ↓   ↓   ↓   ↓   ↓                   ↓指示匹配点(REAL)
+    //A	 A	A	A	C	A	B	B	C	A	A	A	A	A	C	A	B	B  搜索字符串2
+    //0	 1	2	3	0	1	0	0	0	1	2	3	4	4	5	6	7	8  next2[]
     //0  1  2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17 index
     public static int[] kmpNext(String dest) {
-        //                j   第几次匹配
-        //0 1 2 3 0 1 2 3 3
-        //A A A A B A A A ?A=3
-        //                i  当前扫描的位置
-        //求?A的位置 上面我先标出答案其实也是3
-        //因为是第j次匹配所以从0开始实际反映在数组里是下标j-1 令j=next[j-1] 求出j-1这个下标第几次匹配
-        //创建一个next数组 把偶才能部分匹配值 含义index时对应第几次匹配
         int[] next = new int[dest.length()];
         for (int i = 1, j = 0; i < dest.length(); i++) {
             while (j > 0 && dest.charAt(i) != dest.charAt(j)) {
