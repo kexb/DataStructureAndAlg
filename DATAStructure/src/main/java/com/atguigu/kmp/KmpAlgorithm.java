@@ -11,7 +11,9 @@ public class KmpAlgorithm {
         //AAAACABBCAAAAACABB 子串
         int prexLen="ABBBDABBBBAAAACABBCBAAAACABBCAA".length();
         System.out.println("prexlen="+prexLen);
-        String str1="ABBBDABBBBAAAACABBCBAAAACABBCAA AAAACABBCAAAAACABB".replace(" ","");
+        String str1="C\t C\tC\tC\tC\tC\tC\tC\tC\tA\tA\tA\tA\tC\tA\tB\tB\tC\tA A A A\tC A\tB B\tC A\tA A\tA A\tC A B B"
+                .replace("\t","")
+                .replace(" ","");
         String str2="AAAACABBCAAAAACABB";
         int[] next = kmpNext(str2);
         for (int i = 0; i < next.length; i++) {
@@ -68,8 +70,8 @@ public class KmpAlgorithm {
 
     //获取到一个字符串(子串)的部分匹配值表 从index=9 next[9]=1 I=13开始测试
     //                                              4   4
-    //                                  ↓   ↓   ↓   ↓   ↓                  指示匹配点
-    //C	 C	C	C	C	C	C	C	C	A	A	A	A	D	C	A	B	B  原始字符串
+    //                                  ↓   ↓   ↓   ↓   ↓                   ↓指示匹配点(REAL)
+    //C	 C	C	C	C	C	C	C	C	A	A	A	A	C	A	B	B	C	A A A A	C A	B B	C A	A A	A A	C A B B原始字符串
     //A	 A	A	A	C	A	B	B	C	A	A	A	A	A	C	A	B	B  搜索字符串
     //0	 1	2	3	0	1	0	0	0	1	2	3	4	4	5	6	7	8  next[]
     //0  1  2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17 index
