@@ -50,7 +50,7 @@ public class KmpAlgorithm {
                 //#region 2 i可以保持 只需要j左移
                 // 2.1 位移 k=j-next[j-1]位
                 // 2.2 j=j-k=j-(j-next[j-1])=j-j+next[j-1]=next[j-1]
-                 j = next[j - 1];
+                j = next[j - 1];
                 //endregion
 
 
@@ -89,6 +89,24 @@ public class KmpAlgorithm {
     //A	 A	A	A	C	A	B	B	C	A	A	A	A	A	C	A	B	B  搜索字符串2
     //0	 1	2	3	0	1	0	0	0	1	2	3	4	4	5	6	7	8  next2[]
     //0  1  2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17 index
+
+    /**
+     由回溯条件得知最后两个元素是一样的 假设为A
+     则搜索字符串为 a1a2a3....AAB...的形式
+
+     因为 存在可能的回溯 得出
+     a1a2a3...A=a2a3a4...A
+
+     由一 一 对应原则 可以再次得出
+     a1=a2
+     a2=a3
+     an-1=an
+
+
+     假设a1=A  则有N+1个A
+     如AAAB...AAAAB A的个数是N=3 子串就有4个A+一个B
+
+     **/
     public static int[] kmpNext(String dest) {
         int[] next = new int[dest.length()];
         for (int i = 1, j = 0; i < dest.length(); i++) {
@@ -104,3 +122,4 @@ public class KmpAlgorithm {
         return next;
     }
 }
+
