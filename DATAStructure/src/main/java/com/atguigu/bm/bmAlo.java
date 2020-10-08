@@ -78,6 +78,7 @@ public class bmAlo {
             suffix[i] = -1;
             prefix[i] = false;
         }
+        //模式串的长度为m 则前缀子串的最大长度为m-1
         for (int i = 0; i < m - 1; ++i) {
             int j = i;
             int k = 0;
