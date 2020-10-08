@@ -56,7 +56,7 @@ public class bmAlo {
             int x = j - bc[(int) mainStr[i + j]];
             int y = 0;
             if (j < patternLength - 1) {
-                //好字符 移动距离
+                //好后缀 移动距离
                 y = moveByGs(j, patternLength, suffix, prefix);
             }
             //取最大值 (坏字符可能小于0，X,Y大小关系也未定)
