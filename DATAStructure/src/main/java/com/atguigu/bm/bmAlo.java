@@ -1,6 +1,9 @@
 package com.atguigu.bm;
 
 public class bmAlo {
+    /**
+     * 散列表长度
+     */
     private int size;
 
     public static void main(String[] args) {
@@ -16,12 +19,22 @@ public class bmAlo {
         this.size = size;
     }
 
+
+    /**
+     * bm算法
+     *
+     * @param a 主串
+     * @param n 模式串
+     * @param b 示主串的长度
+     * @param m 模式串的长度
+     * @return 模式串 在 主串 位置
+     */
     public int bm(char[] a, int n, char[] b, int m) {
         int[] bc = new int[size];
-        generateBC(b, m, bc);
+        generateBc(b, m, bc);
         int[] suffix = new int[m];
         boolean[] prefix = new boolean[m];
-        generateGS(b, m, suffix, prefix);
+        generateGs(b, m, suffix, prefix);
         int i = 0;
         while (i <= n - m) {
             int j;
@@ -36,14 +49,22 @@ public class bmAlo {
             int x = j - bc[(int) a[i + j]];
             int y = 0;
             if (j < m - 1) {
-                y = moveByGS(j, m, suffix, prefix);
+                y = moveByGs(j, m, suffix, prefix);
             }
             i = i + Math.max(x, y);
         }
         return -1;
     }
 
-    private void generateGS(char[] b, int m, int[] suffix, boolean[] prefix) {
+    /**
+     * 前轴和后缀计算过程
+     *
+     * @param b      模式串
+     * @param m      模式串长度
+     * @param suffix 后缀数组
+     * @param prefix 前缀数组
+     */
+    private void generateGs(char[] b, int m, int[] suffix, boolean[] prefix) {
         for (int i = 0; i < m; ++i) {
             suffix[i] = -1;
             prefix[i] = false;
@@ -61,7 +82,15 @@ public class bmAlo {
         }
     }
 
-    private void generateBC(char[] b, int m, int[] bc) {
+
+    /**
+     * 散列表初始化
+     *
+     * @param b  模式串
+     * @param m  模式串的长度
+     * @param bc 表示刚刚讲的散列表
+     */
+    private void generateBc(char[] b, int m, int[] bc) {
         for (int i = 0; i < size; i++) {
             bc[i] = -1;
         }
@@ -71,7 +100,17 @@ public class bmAlo {
         }
     }
 
-    private int moveByGS(int j, int m, int[] suffix, boolean[] prefix) {
+
+    /**
+     * 模式串-滑动
+     *
+     * @param j      j表示坏字符对应的模式串中的字符下标
+     * @param m      m表示模式串长度
+     * @param suffix 后缀数组
+     * @param prefix 前缀数组
+     * @return 滑动距离
+     */
+    private int moveByGs(int j, int m, int[] suffix, boolean[] prefix) {
         int k = m - 1 - j;
         if (suffix[k] != -1) {
             return j - suffix[k] + 1;
