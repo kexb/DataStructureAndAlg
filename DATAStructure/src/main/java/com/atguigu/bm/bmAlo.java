@@ -8,10 +8,10 @@ public class bmAlo {
 
     public static void main(String[] args) {
         bmAlo obj = new bmAlo();
-        char[] a = {'1', '2', '3', '我', '5'};
-        char[] b = {'2', '3'};
+        char[] mainStr = {'1', '2', '3', '我', '5'};
+        char[] patternStr = {'2', '3'};
         obj.setSize(65535);
-        int bm = obj.bm(a, a.length, b, b.length);
+        int bm = obj.bm(mainStr, mainStr.length, patternStr, patternStr.length);
         System.out.println(bm);
     }
 
