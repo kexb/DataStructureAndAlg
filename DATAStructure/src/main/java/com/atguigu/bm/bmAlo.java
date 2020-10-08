@@ -42,18 +42,24 @@ public class bmAlo {
         while (i <= n - m) {
             int j;
             for (j = m - 1; j >= 0; --j) {
+                //主串和模式串从最后一个元素开始比较  从右到左
                 if (a[i + j] != b[j]) {
                     break;
                 }
             }
+            //上一个for循环全部走完 说明全匹配 那么j最终会小于0
+            // 说明"i"就是模式字符串在主串的位置
             if (j < 0) {
                 return i;
             }
+            //坏字符 移动距离(散列值只会取最后一次) 这样滑动的距离最短（防止滑动过多）
             int x = j - bc[(int) a[i + j]];
             int y = 0;
             if (j < m - 1) {
+                //好字符 移动距离
                 y = moveByGs(j, m, suffix, prefix);
             }
+            //取最大值 (坏字符可能小于0，X,Y大小关系也未定)
             i = i + Math.max(x, y);
         }
         return -1;
