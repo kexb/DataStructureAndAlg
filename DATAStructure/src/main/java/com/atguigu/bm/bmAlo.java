@@ -114,7 +114,7 @@ public class bmAlo {
         int k = m - 1 - j;
         if (suffix[k] != -1) {
             return j - suffix[k] + 1;
-        }
+        } 
         for (int r = j + 2; r <= m - 1; ++r) {
             if (prefix[m - r]) {
                 return r;
