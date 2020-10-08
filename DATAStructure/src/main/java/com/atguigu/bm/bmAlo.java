@@ -30,8 +30,9 @@ public class bmAlo {
      * @return 模式串 在 主串 位置
      */
     public int bm(char[] a, int n, char[] b, int m) {
+        //散列表 key:ascall码值 value：模式串下标
         int[] bc = new int[size];
-        //散列表初始化
+        //散列表初始化 key:ascall码值 value：模式串下标
         generateBc(b, m, bc);
         int[] suffix = new int[m];
         boolean[] prefix = new boolean[m];
