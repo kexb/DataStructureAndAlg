@@ -59,7 +59,7 @@ public class bmAlo {
                 //好后缀 移动距离
                 y = moveByGs(j, patternLength, suffix, prefix);
             }
-            //取最大值 (坏字符可能小于0，X,Y大小关系也未定)
+            //这种处理方法还可以避免我们前面提到的，根据坏字符规则，计算得到的往后滑动的位数，有可能是负数的情况。
             i = i + Math.max(x, y);
         }
         return -1;
