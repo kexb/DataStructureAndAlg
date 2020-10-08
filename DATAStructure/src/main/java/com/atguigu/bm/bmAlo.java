@@ -23,9 +23,9 @@ public class bmAlo {
     /**
      * bm算法
      *
-     * @param mainStr 主串
-     * @param mainLength 示主串的长度
-     * @param patternStr 模式串
+     * @param mainStr       主串
+     * @param mainLength    示主串的长度
+     * @param patternStr    模式串
      * @param patternLength 模式串的长度
      * @return 模式串 在 主串 位置
      */
@@ -83,6 +83,7 @@ public class bmAlo {
             int k = 0;
             while (j >= 0 && b[j] == b[m - 1 - k]) {
                 --j;
+                ++k;
                 suffix[k] = j + 1;
             }
             if (j == -1) {
@@ -95,9 +96,9 @@ public class bmAlo {
     /**
      * 散列表初始化
      *
-     * @param patternStr  模式串
-     * @param patternLength  模式串的长度
-     * @param bc 表示刚刚讲的散列表
+     * @param patternStr    模式串
+     * @param patternLength 模式串的长度
+     * @param bc            表示刚刚讲的散列表
      */
     private void generateBc(char[] patternStr, int patternLength, int[] bc) {
         for (int i = 0; i < size; i++) {
@@ -113,10 +114,10 @@ public class bmAlo {
     /**
      * 模式串-滑动
      *
-     * @param j      j表示坏字符对应的模式串中的字符下标
-     * @param patternLength      m表示模式串长度
-     * @param suffix 后缀数组
-     * @param prefix 前缀数组
+     * @param j             j表示坏字符对应的模式串中的字符下标
+     * @param patternLength m表示模式串长度
+     * @param suffix        后缀数组
+     * @param prefix        前缀数组
      * @return 滑动距离
      */
     private int moveByGs(int j, int patternLength, int[] suffix, boolean[] prefix) {
