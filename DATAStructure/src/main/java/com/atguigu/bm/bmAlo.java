@@ -132,6 +132,7 @@ public class bmAlo {
         //3  4  j  3  4  j的时候不等那么 设从后往前一共有X位相等 X=patternLength-length（0..j）=patternLength-（j+1）
         //5  6  5  3  4
         int k = patternLength - 1 - j;
+        //好后缀规则一
         //suffix[k]:从模式串末尾往回算k个相等的开始下标（在模式串上的回溯）
         if (suffix[k] != -1) {
             //要把suffix[k]移动到后缀开始的地方 必须先移动到j的位置
@@ -144,6 +145,7 @@ public class bmAlo {
         //3  4  7  3  4  5  5  6  6  3  4   5
         //5  6  6  3  4  5
         //进入这个方法就说明至少一个相等  所以从+2开始
+        //好后缀规则二
         for (int r = j + 2; r <= patternLength - 1; ++r) {
             //patternLength-1-r : 末尾和r相隔有几位
             //patternLength-1-r+1: r到末尾有几位
@@ -151,6 +153,7 @@ public class bmAlo {
                 return r;
             }
         }
+        //好后缀规则一和规则二都没匹配到的我们就将整个模式串后移 patternLength 位。
         return patternLength;
     }
     private static class 坏字符规则 {
