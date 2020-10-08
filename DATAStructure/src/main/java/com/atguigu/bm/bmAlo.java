@@ -11,6 +11,8 @@ public class bmAlo {
         坏字符规则 regular = new 坏字符规则().invoke();
         char[] mainStr = regular.getMainStr();
         char[] patternStr = regular.getPatternStr();
+        mainStr="3  4  7  3  4  5 5  6  6  3  4  5".replaceAll(" ","").toCharArray();
+        patternStr="5  6  6  3  4  5".replaceAll(" ","").toCharArray();
         obj.setSize(65535);
         int bm = obj.bm(mainStr, mainStr.length, patternStr, patternStr.length);
         System.out.println(bm);
@@ -122,8 +124,10 @@ public class bmAlo {
      * @param prefix        前缀数组
      * @return 滑动距离
      */
+    @SuppressWarnings("AlibabaUndefineMagicConstant")
     private int moveBySuffixAndPrefix(int j, int patternLength, int[] suffix, boolean[] prefix) {
         //3  4  j  3  4  j的时候不等那么 设从后往前一共有X位相等 X=patternLength-length（0..j）=patternLength-（j+1）
+        //5  6  5  3  4
         int k = patternLength - 1 - j;
         if (suffix[k] != -1) {
             //要把suffix[k]移动到后缀开始的地方 必须先移动到j的位置
@@ -131,6 +135,11 @@ public class bmAlo {
             //那么j的后面就是开始匹配的位置 所以要再+1 即下面
             return j - suffix[k] + 1;
         }
+        //      j
+        //0  1  2  3  4  5
+        //3  4  7  3  4  5
+        //5  6  6  3  4  5
+        //因为j后面至少1位相等 所以从+2开始
         for (int r = j + 2; r <= patternLength - 1; ++r) {
             if (prefix[patternLength - r]) {
                 return r;
