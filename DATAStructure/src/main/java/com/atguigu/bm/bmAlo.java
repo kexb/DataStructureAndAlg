@@ -73,7 +73,7 @@ public class bmAlo {
      *
      * @param b      模式串
      * @param m      模式串长度
-     * @param suffix 后缀数组
+     * @param suffix 后缀数组  从模式串末尾往回算k个相等的开始下标（在模式串上的回溯）
      * @param prefix 前缀数组
      */
     private void generateSuffixAndPrefix(char[] b, int m, int[] suffix, boolean[] prefix) {
@@ -85,6 +85,9 @@ public class bmAlo {
         for (int i = 0; i < m - 1; ++i) {
             int j = i;
             int k = 0;
+            //0  1  2  3  4  5  6  7  8  9  10  11
+            //3  4  7  3  4  5  5  6  6  3  4   5  main
+            //5  6  6  3  4  5                     pattern
             while (j >= 0 && b[j] == b[m - 1 - k]) {
                 --j;
                 ++k;
@@ -120,7 +123,7 @@ public class bmAlo {
      *
      * @param j             j表示坏字符对应的模式串中的字符下标
      * @param patternLength m表示模式串长度
-     * @param suffix        后缀数组
+     * @param suffix        后缀数组 从模式串末尾往回算k个相等的开始下标（在模式串上的回溯）
      * @param prefix        前缀数组
      * @return 滑动距离
      */
@@ -129,6 +132,7 @@ public class bmAlo {
         //3  4  j  3  4  j的时候不等那么 设从后往前一共有X位相等 X=patternLength-length（0..j）=patternLength-（j+1）
         //5  6  5  3  4
         int k = patternLength - 1 - j;
+        //suffix[k]:从模式串末尾往回算k个相等的开始下标（在模式串上的回溯）
         if (suffix[k] != -1) {
             //要把suffix[k]移动到后缀开始的地方 必须先移动到j的位置
             //要移动j - suffix[k] 到达j
@@ -136,11 +140,13 @@ public class bmAlo {
             return j - suffix[k] + 1;
         }
         //      j
-        //0  1  2  3  4  5
-        //3  4  7  3  4  5
+        //0  1  2  3  4  5  6  7  8  9  10  11
+        //3  4  7  3  4  5  5  6  6  3  4   5
         //5  6  6  3  4  5
-        //因为j后面至少1位相等 所以从+2开始
+        //进入这个方法就说明至少一个相等  所以从+2开始
         for (int r = j + 2; r <= patternLength - 1; ++r) {
+            //patternLength-1-r : 末尾和r相隔有几位
+            //patternLength-1-r+1: r到末尾有几位
             if (prefix[patternLength - r]) {
                 return r;
             }
