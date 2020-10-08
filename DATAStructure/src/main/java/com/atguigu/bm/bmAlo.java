@@ -32,9 +32,9 @@ public class bmAlo {
      */
     public int bm(char[] mainStr, int mainLength, char[] patternStr, int patternLength) {
         //散列表 key:ascall码值 value：模式串下标
-        int[] bc = new int[size];
+        int[] hash = new int[size];
         //散列表初始化 key:ascall码值 value：模式串下标
-        generateHashAscallAndIndexInPattern(patternStr, patternLength, bc);
+        generateHashAscallAndIndexInPattern(patternStr, patternLength, hash);
         int[] suffix = new int[patternLength];
         boolean[] prefix = new boolean[patternLength];
         //前轴和后缀计算过程
@@ -54,7 +54,7 @@ public class bmAlo {
                 return i;
             }
             //坏字符 移动距离(散列值只会取最后一次) 这样滑动的距离最短（防止滑动过多）
-            int x = j - bc[(int) mainStr[i + j]];
+            int x = j - hash[(int) mainStr[i + j]];
             int y = 0;
             if (j < patternLength - 1) {
                 //好后缀 移动距离
