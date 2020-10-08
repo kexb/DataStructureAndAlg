@@ -8,8 +8,9 @@ public class bmAlo {
 
     public static void main(String[] args) {
         bmAlo obj = new bmAlo();
-        char[] mainStr = {'1', '2', '3', '我', '5'};
-        char[] patternStr = {'2', '3'};
+        好后缀规则二 regular = new 好后缀规则二().invoke();
+        char[] mainStr = regular.getMainStr();
+        char[] patternStr = regular.getPatternStr();
         obj.setSize(65535);
         int bm = obj.bm(mainStr, mainStr.length, patternStr, patternStr.length);
         System.out.println(bm);
@@ -33,11 +34,11 @@ public class bmAlo {
         //散列表 key:ascall码值 value：模式串下标
         int[] bc = new int[size];
         //散列表初始化 key:ascall码值 value：模式串下标
-        generateBc(patternStr, patternLength, bc);
+        generateHashAscallAndIndexInPattern(patternStr, patternLength, bc);
         int[] suffix = new int[patternLength];
         boolean[] prefix = new boolean[patternLength];
         //前轴和后缀计算过程
-        generateGs(patternStr, patternLength, suffix, prefix);
+        generateSuffixAndPrefix(patternStr, patternLength, suffix, prefix);
         int i = 0;
         while (i <= mainLength - patternLength) {
             int j;
@@ -57,7 +58,7 @@ public class bmAlo {
             int y = 0;
             if (j < patternLength - 1) {
                 //好后缀 移动距离
-                y = moveByGs(j, patternLength, suffix, prefix);
+                y = moveBySuffixAndPrefix(j, patternLength, suffix, prefix);
             }
             //这种处理方法还可以避免我们前面提到的，根据坏字符规则，计算得到的往后滑动的位数，有可能是负数的情况。
             i = i + Math.max(x, y);
@@ -73,7 +74,7 @@ public class bmAlo {
      * @param suffix 后缀数组
      * @param prefix 前缀数组
      */
-    private void generateGs(char[] b, int m, int[] suffix, boolean[] prefix) {
+    private void generateSuffixAndPrefix(char[] b, int m, int[] suffix, boolean[] prefix) {
         for (int i = 0; i < m; ++i) {
             suffix[i] = -1;
             prefix[i] = false;
@@ -99,15 +100,15 @@ public class bmAlo {
      *
      * @param patternStr    模式串
      * @param patternLength 模式串的长度
-     * @param bc            表示刚刚讲的散列表
+     * @param hash            表示刚刚讲的散列表
      */
-    private void generateBc(char[] patternStr, int patternLength, int[] bc) {
+    private void generateHashAscallAndIndexInPattern(char[] patternStr, int patternLength, int[] hash) {
         for (int i = 0; i < size; i++) {
-            bc[i] = -1;
+            hash[i] = -1;
         }
         for (int i = 0; i < patternLength; ++i) {
             int ascii = patternStr[i];
-            bc[ascii] = i;
+            hash[ascii] = i;
         }
     }
 
@@ -121,9 +122,13 @@ public class bmAlo {
      * @param prefix        前缀数组
      * @return 滑动距离
      */
-    private int moveByGs(int j, int patternLength, int[] suffix, boolean[] prefix) {
+    private int moveBySuffixAndPrefix(int j, int patternLength, int[] suffix, boolean[] prefix) {
+        //3  4  j  3  4  j的时候不等那么 设从后往前一共有X位相等 X=patternLength-length（0..j）=patternLength-（j+1）
         int k = patternLength - 1 - j;
         if (suffix[k] != -1) {
+            //要把suffix[k]移动到后缀开始的地方 必须先移动到j的位置
+            //要移动j - suffix[k] 到达j
+            //那么j的后面就是开始匹配的位置 所以要再+1 即下面
             return j - suffix[k] + 1;
         }
         for (int r = j + 2; r <= patternLength - 1; ++r) {
@@ -132,5 +137,42 @@ public class bmAlo {
             }
         }
         return patternLength;
+    }
+
+    private static class 好后缀规则一 {
+        private char[] mainStr;
+        private char[] patternStr;
+
+        public char[] getMainStr() {
+            return mainStr;
+        }
+
+        public char[] getPatternStr() {
+            return patternStr;
+        }
+
+        public 好后缀规则一 invoke() {
+            mainStr = "abc aac bab bac ab".replaceAll(" ","").toCharArray();
+            patternStr = "bc ab ab".replaceAll(" ","").toCharArray();
+            return this;
+        }
+    }
+    private static class 好后缀规则二 {
+        private char[] mainStr;
+        private char[] patternStr;
+
+        public char[] getMainStr() {
+            return mainStr;
+        }
+
+        public char[] getPatternStr() {
+            return patternStr;
+        }
+
+        public 好后缀规则二 invoke() {
+            mainStr = ("    "+"b a b c d e".replaceAll(" ","")).toCharArray();
+            patternStr = "c d e a b c  d e".replaceAll(" ","").toCharArray();
+            return this;
+        }
     }
 }
