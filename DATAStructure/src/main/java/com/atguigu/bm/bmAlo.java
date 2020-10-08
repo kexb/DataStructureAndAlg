@@ -24,8 +24,8 @@ public class bmAlo {
      * bm算法
      *
      * @param a 主串
-     * @param n 模式串
-     * @param b 示主串的长度
+     * @param n 示主串的长度
+     * @param b 模式串
      * @param m 模式串的长度
      * @return 模式串 在 主串 位置
      */
