@@ -8,7 +8,7 @@ public class bmAlo {
 
     public static void main(String[] args) {
         bmAlo obj = new bmAlo();
-        好后缀规则二 regular = new 好后缀规则二().invoke();
+        坏字符规则 regular = new 坏字符规则().invoke();
         char[] mainStr = regular.getMainStr();
         char[] patternStr = regular.getPatternStr();
         obj.setSize(65535);
@@ -138,7 +138,24 @@ public class bmAlo {
         }
         return patternLength;
     }
+    private static class 坏字符规则 {
+        private char[] mainStr;
+        private char[] patternStr;
 
+        public char[] getMainStr() {
+            return mainStr;
+        }
+
+        public char[] getPatternStr() {
+            return patternStr;
+        }
+
+        public 坏字符规则 invoke() {
+            mainStr = ("a b b a d c a b a b a c a b".replaceAll(" ","")).toCharArray();
+            patternStr = "b a b a c".replaceAll(" ","").toCharArray();
+            return this;
+        }
+    }
     private static class 好后缀规则一 {
         private char[] mainStr;
         private char[] patternStr;
